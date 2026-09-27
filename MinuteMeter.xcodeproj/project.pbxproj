@@ -1,0 +1,950 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		019AB4C973449DC6AEE631CC /* DesignTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF109627DAD8B5DF59826C56 /* DesignTokens.swift */; };
+		03CB2E6C97DF203DBFF0A8E1 /* Barlow-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6F7F7B92B7AD117E8789E42E /* Barlow-Medium.ttf */; };
+		04E868BCD8CCA315EB9C1E52 /* DesignTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF109627DAD8B5DF59826C56 /* DesignTokens.swift */; };
+		102B3D704499FED7FD1B002D /* UnlockActivityAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFFF9E182870F3B24D8AE0A /* UnlockActivityAttributes.swift */; };
+		1835CB81F873A596B35A806D /* Barlow-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB4A47C9494BD63439517ADC /* Barlow-Regular.ttf */; };
+		2027BD060C4FD5A041017532 /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D38D0FA24D76DC97A711302 /* AppGroup.swift */; };
+		2030955D5F92CF63319CAB0A /* Barlow-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 439711EE0DA5B6B2B579A471 /* Barlow-SemiBold.ttf */; };
+		2DF4812478FF822F6B85CE3B /* MinuteMeterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF084AC5CDA5BD374E53BE7 /* MinuteMeterTests.swift */; };
+		3C00E001333EE45D0F27D2B5 /* LiveActivityBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0189FC31A4C803502274CA /* LiveActivityBundle.swift */; };
+		3F16CC8FE45355C25E31E2EF /* Barlow-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB4A47C9494BD63439517ADC /* Barlow-Regular.ttf */; };
+		401AD1304CF4F98434657BD4 /* Barlow-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DF7D176890C0AF384967CF11 /* Barlow-Bold.ttf */; };
+		4BC43E498994B98CA4FCDC10 /* MinuteMeterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D9A9A6556994D8F798DDF8 /* MinuteMeterApp.swift */; };
+		4DBD67B84F53FA5BE49321B4 /* UnlockActivityAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFFF9E182870F3B24D8AE0A /* UnlockActivityAttributes.swift */; };
+		54D7D63708CC5D83104932A8 /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D38D0FA24D76DC97A711302 /* AppGroup.swift */; };
+		581363A1860E05E4B44790FC /* Barlow-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6F7F7B92B7AD117E8789E42E /* Barlow-Medium.ttf */; };
+		5B8D61F19DD3C97712B92E0C /* ShieldAction.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 4C94881B9E8A1A7502325A43 /* ShieldAction.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		65D9B047AD1EA5E712E6D14A /* UnlockLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE3C50C79757818234B90EF /* UnlockLiveActivity.swift */; };
+		672E9F36EA1CE6549C708C19 /* DeviceActivityMonitorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9D293CE7C70FC4E62319EC /* DeviceActivityMonitorExtension.swift */; };
+		70E5F19E11DB7011F525EA4B /* UnlockActivityAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFFF9E182870F3B24D8AE0A /* UnlockActivityAttributes.swift */; };
+		745E794B6E9EE986B448E6E5 /* BarlowSemiCondensed-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFB993310CB710E4B22D85F5 /* BarlowSemiCondensed-SemiBold.ttf */; };
+		882496C7163B2555A3038940 /* Barlow-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 439711EE0DA5B6B2B579A471 /* Barlow-SemiBold.ttf */; };
+		9966A6F281D7A83A83022C14 /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D38D0FA24D76DC97A711302 /* AppGroup.swift */; };
+		99ED7AB5959FC05ECE3A9B41 /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D38D0FA24D76DC97A711302 /* AppGroup.swift */; };
+		9FD05856C444EB987904636D /* ShieldActionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7082899C25FE130749A7A0E3 /* ShieldActionExtension.swift */; };
+		A9B1F8606C9E5E0E49C1B62F /* DesignTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF109627DAD8B5DF59826C56 /* DesignTokens.swift */; };
+		AB334CDE37C2FB025290ADC2 /* BarlowSemiCondensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 29CBD32B875F5F6FD43C7E76 /* BarlowSemiCondensed-Bold.ttf */; };
+		AC59ADB7FFB3E8D604185800 /* ShieldConfiguration.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 990F16CC0E15D476C3D0BD32 /* ShieldConfiguration.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C725773A2B004C1C68999FF6 /* ShieldConfigurationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6236C0C5117737FC3ABF3053 /* ShieldConfigurationExtension.swift */; };
+		CA0B9CF9E43C4C874E11612B /* BarlowSemiCondensed-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CFC955D02DD6858FBD10B537 /* BarlowSemiCondensed-Medium.ttf */; };
+		CC2A18E0AE9B7641AE51C125 /* Monitor.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 79833ED726EE2E5AD57467CE /* Monitor.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D4CA502779D730A0EEF23758 /* UnlockActivityAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFFF9E182870F3B24D8AE0A /* UnlockActivityAttributes.swift */; };
+		D508B9B66F21FF67232B64B8 /* Barlow-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DF7D176890C0AF384967CF11 /* Barlow-Bold.ttf */; };
+		D7BD3879F973F9B8325D6746 /* BarlowSemiCondensed-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CFC955D02DD6858FBD10B537 /* BarlowSemiCondensed-Medium.ttf */; };
+		DFE839025406D6BC1E1F7428 /* BarlowSemiCondensed-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFB993310CB710E4B22D85F5 /* BarlowSemiCondensed-SemiBold.ttf */; };
+		F32D8598129D650B437BDE91 /* DesignTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF109627DAD8B5DF59826C56 /* DesignTokens.swift */; };
+		F7940BBF49BFFF70C5909CF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A50EADC48B22804A4B39C40 /* Assets.xcassets */; };
+		F8BB788EB09D49E53CD7AC3B /* LiveActivity.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = A95C9E3D4F41BDF36F708DD3 /* LiveActivity.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F9FFF8B6F53C521F4FD408FD /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D38D0FA24D76DC97A711302 /* AppGroup.swift */; };
+		FB5E2BFF5826DA161B6B4C75 /* UnlockActivityAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFFF9E182870F3B24D8AE0A /* UnlockActivityAttributes.swift */; };
+		FB7F3B7B5435E56F4DB34963 /* BarlowSemiCondensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 29CBD32B875F5F6FD43C7E76 /* BarlowSemiCondensed-Bold.ttf */; };
+		FECBE8F5F937DEC791838013 /* DesignTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF109627DAD8B5DF59826C56 /* DesignTokens.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4BD2BC63CBCA0786832349A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D0F00E9B98C8BF3BA8AE8771 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D1F43B4EE82F75EC17D90A36;
+			remoteInfo = LiveActivity;
+		};
+		5003B1082BD0D134B577FB86 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D0F00E9B98C8BF3BA8AE8771 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 97952F33830980056BBD6C96;
+			remoteInfo = MinuteMeter;
+		};
+		6CE9260F255C936C7A8F8970 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D0F00E9B98C8BF3BA8AE8771 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BAE6FCB05405D52DEBAE9004;
+			remoteInfo = ShieldAction;
+		};
+		7438DBE27FEC5A6911D74A34 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D0F00E9B98C8BF3BA8AE8771 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9FE83835BA7F11A77C98C3BC;
+			remoteInfo = ShieldConfiguration;
+		};
+		7FF7A5E676B9F3980FAFC4D2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D0F00E9B98C8BF3BA8AE8771 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6A8E138AD7F339BF612E3065;
+			remoteInfo = Monitor;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		61137C0864B39127A1BA129E /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				AC59ADB7FFB3E8D604185800 /* ShieldConfiguration.appex in Embed Foundation Extensions */,
+				5B8D61F19DD3C97712B92E0C /* ShieldAction.appex in Embed Foundation Extensions */,
+				CC2A18E0AE9B7641AE51C125 /* Monitor.appex in Embed Foundation Extensions */,
+				F8BB788EB09D49E53CD7AC3B /* LiveActivity.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0C68322C0BE0DC1621A9F258 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		262903BB42DBB2D6F964B177 /* MinuteMeterTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = MinuteMeterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		29CBD32B875F5F6FD43C7E76 /* BarlowSemiCondensed-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BarlowSemiCondensed-Bold.ttf"; sourceTree = "<group>"; };
+		341F7DF6B8BEBC0FB50DF5BC /* MinuteMeter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MinuteMeter.entitlements; sourceTree = "<group>"; };
+		3D0189FC31A4C803502274CA /* LiveActivityBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveActivityBundle.swift; sourceTree = "<group>"; };
+		402F77169E70E1F79DAA4C7C /* ShieldConfiguration.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShieldConfiguration.entitlements; sourceTree = "<group>"; };
+		439711EE0DA5B6B2B579A471 /* Barlow-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Barlow-SemiBold.ttf"; sourceTree = "<group>"; };
+		4BFFF9E182870F3B24D8AE0A /* UnlockActivityAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockActivityAttributes.swift; sourceTree = "<group>"; };
+		4C94881B9E8A1A7502325A43 /* ShieldAction.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = ShieldAction.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CE3C50C79757818234B90EF /* UnlockLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockLiveActivity.swift; sourceTree = "<group>"; };
+		5EDE70A5916C9AE75A483BDE /* ShieldAction.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShieldAction.entitlements; sourceTree = "<group>"; };
+		6236C0C5117737FC3ABF3053 /* ShieldConfigurationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShieldConfigurationExtension.swift; sourceTree = "<group>"; };
+		6F7F7B92B7AD117E8789E42E /* Barlow-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Barlow-Medium.ttf"; sourceTree = "<group>"; };
+		7082899C25FE130749A7A0E3 /* ShieldActionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShieldActionExtension.swift; sourceTree = "<group>"; };
+		79833ED726EE2E5AD57467CE /* Monitor.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = Monitor.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A50EADC48B22804A4B39C40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7D38D0FA24D76DC97A711302 /* AppGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppGroup.swift; sourceTree = "<group>"; };
+		8C9D293CE7C70FC4E62319EC /* DeviceActivityMonitorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceActivityMonitorExtension.swift; sourceTree = "<group>"; };
+		8D6BC933A63B231C836E86BA /* Monitor.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Monitor.entitlements; sourceTree = "<group>"; };
+		990F16CC0E15D476C3D0BD32 /* ShieldConfiguration.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = ShieldConfiguration.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		A95C9E3D4F41BDF36F708DD3 /* LiveActivity.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = LiveActivity.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFB993310CB710E4B22D85F5 /* BarlowSemiCondensed-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BarlowSemiCondensed-SemiBold.ttf"; sourceTree = "<group>"; };
+		B7BC9A7D234DCD1CF103B6DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		BDF084AC5CDA5BD374E53BE7 /* MinuteMeterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinuteMeterTests.swift; sourceTree = "<group>"; };
+		CFC955D02DD6858FBD10B537 /* BarlowSemiCondensed-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BarlowSemiCondensed-Medium.ttf"; sourceTree = "<group>"; };
+		D5D9A9A6556994D8F798DDF8 /* MinuteMeterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinuteMeterApp.swift; sourceTree = "<group>"; };
+		DF7D176890C0AF384967CF11 /* Barlow-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Barlow-Bold.ttf"; sourceTree = "<group>"; };
+		E7BD0E955CD6ECC53769F220 /* MinuteMeter.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = MinuteMeter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB4A47C9494BD63439517ADC /* Barlow-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Barlow-Regular.ttf"; sourceTree = "<group>"; };
+		EF109627DAD8B5DF59826C56 /* DesignTokens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignTokens.swift; sourceTree = "<group>"; };
+		EF9C67D122D133F32AFAE34A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		F66E4C9196A33FDDBBA92913 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		F83F1F4F1AF68B9212DD8F8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		0125891D43209BE12ED5EA2A /* LiveActivity */ = {
+			isa = PBXGroup;
+			children = (
+				B7BC9A7D234DCD1CF103B6DB /* Info.plist */,
+				3D0189FC31A4C803502274CA /* LiveActivityBundle.swift */,
+				4CE3C50C79757818234B90EF /* UnlockLiveActivity.swift */,
+			);
+			path = LiveActivity;
+			sourceTree = "<group>";
+		};
+		0AB2F717BE5A6BBBD1987FEC /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				DF7D176890C0AF384967CF11 /* Barlow-Bold.ttf */,
+				6F7F7B92B7AD117E8789E42E /* Barlow-Medium.ttf */,
+				EB4A47C9494BD63439517ADC /* Barlow-Regular.ttf */,
+				439711EE0DA5B6B2B579A471 /* Barlow-SemiBold.ttf */,
+				29CBD32B875F5F6FD43C7E76 /* BarlowSemiCondensed-Bold.ttf */,
+				CFC955D02DD6858FBD10B537 /* BarlowSemiCondensed-Medium.ttf */,
+				AFB993310CB710E4B22D85F5 /* BarlowSemiCondensed-SemiBold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		419A37F5AD0E9A6078876AA8 = {
+			isa = PBXGroup;
+			children = (
+				0125891D43209BE12ED5EA2A /* LiveActivity */,
+				6BE868E7ED9C817D5796AFF1 /* MinuteMeter */,
+				D88198B570FE38B5CA1EC3FF /* MinuteMeterTests */,
+				8EE5089B28F924C41B9C51FA /* Monitor */,
+				FCA8F220F19256AA3B37708A /* Shared */,
+				D1841065A1B6B118EE75984B /* ShieldAction */,
+				9BB8DFC4EBA74425C42157A9 /* ShieldConfiguration */,
+				76FD2AAED56204A830240B56 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6BE868E7ED9C817D5796AFF1 /* MinuteMeter */ = {
+			isa = PBXGroup;
+			children = (
+				7A50EADC48B22804A4B39C40 /* Assets.xcassets */,
+				F83F1F4F1AF68B9212DD8F8A /* Info.plist */,
+				341F7DF6B8BEBC0FB50DF5BC /* MinuteMeter.entitlements */,
+				D5D9A9A6556994D8F798DDF8 /* MinuteMeterApp.swift */,
+			);
+			path = MinuteMeter;
+			sourceTree = "<group>";
+		};
+		76FD2AAED56204A830240B56 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A95C9E3D4F41BDF36F708DD3 /* LiveActivity.appex */,
+				E7BD0E955CD6ECC53769F220 /* MinuteMeter.app */,
+				262903BB42DBB2D6F964B177 /* MinuteMeterTests.xctest */,
+				79833ED726EE2E5AD57467CE /* Monitor.appex */,
+				4C94881B9E8A1A7502325A43 /* ShieldAction.appex */,
+				990F16CC0E15D476C3D0BD32 /* ShieldConfiguration.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8EE5089B28F924C41B9C51FA /* Monitor */ = {
+			isa = PBXGroup;
+			children = (
+				8C9D293CE7C70FC4E62319EC /* DeviceActivityMonitorExtension.swift */,
+				EF9C67D122D133F32AFAE34A /* Info.plist */,
+				8D6BC933A63B231C836E86BA /* Monitor.entitlements */,
+			);
+			path = Monitor;
+			sourceTree = "<group>";
+		};
+		9BB8DFC4EBA74425C42157A9 /* ShieldConfiguration */ = {
+			isa = PBXGroup;
+			children = (
+				F66E4C9196A33FDDBBA92913 /* Info.plist */,
+				402F77169E70E1F79DAA4C7C /* ShieldConfiguration.entitlements */,
+				6236C0C5117737FC3ABF3053 /* ShieldConfigurationExtension.swift */,
+			);
+			path = ShieldConfiguration;
+			sourceTree = "<group>";
+		};
+		D1841065A1B6B118EE75984B /* ShieldAction */ = {
+			isa = PBXGroup;
+			children = (
+				0C68322C0BE0DC1621A9F258 /* Info.plist */,
+				5EDE70A5916C9AE75A483BDE /* ShieldAction.entitlements */,
+				7082899C25FE130749A7A0E3 /* ShieldActionExtension.swift */,
+			);
+			path = ShieldAction;
+			sourceTree = "<group>";
+		};
+		D88198B570FE38B5CA1EC3FF /* MinuteMeterTests */ = {
+			isa = PBXGroup;
+			children = (
+				BDF084AC5CDA5BD374E53BE7 /* MinuteMeterTests.swift */,
+			);
+			path = MinuteMeterTests;
+			sourceTree = "<group>";
+		};
+		FCA8F220F19256AA3B37708A /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				0AB2F717BE5A6BBBD1987FEC /* Fonts */,
+				7D38D0FA24D76DC97A711302 /* AppGroup.swift */,
+				EF109627DAD8B5DF59826C56 /* DesignTokens.swift */,
+				4BFFF9E182870F3B24D8AE0A /* UnlockActivityAttributes.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6A8E138AD7F339BF612E3065 /* Monitor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2FFF0BC98AA4AECE027188B6 /* Build configuration list for PBXNativeTarget "Monitor" */;
+			buildPhases = (
+				FF18CA77C06A5A0C3B891084 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Monitor;
+			packageProductDependencies = (
+			);
+			productName = Monitor;
+			productReference = 79833ED726EE2E5AD57467CE /* Monitor.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		97952F33830980056BBD6C96 /* MinuteMeter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0ADBE0F1C720C447AEB9E901 /* Build configuration list for PBXNativeTarget "MinuteMeter" */;
+			buildPhases = (
+				6DEC132E4F6E9B3F774CE18F /* Sources */,
+				60AE62186001F0F744C2B16B /* Resources */,
+				61137C0864B39127A1BA129E /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C405C85DC08AB65EC03998A6 /* PBXTargetDependency */,
+				87A459B332E561D9586B1E42 /* PBXTargetDependency */,
+				1377882D073A8E9B267529CB /* PBXTargetDependency */,
+				860906C7811AA14B9E8F08EE /* PBXTargetDependency */,
+			);
+			name = MinuteMeter;
+			packageProductDependencies = (
+			);
+			productName = MinuteMeter;
+			productReference = E7BD0E955CD6ECC53769F220 /* MinuteMeter.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9FE83835BA7F11A77C98C3BC /* ShieldConfiguration */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3516E05ED77DBEA7229A53A6 /* Build configuration list for PBXNativeTarget "ShieldConfiguration" */;
+			buildPhases = (
+				92DF67E5F2A1F944DEA2544B /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ShieldConfiguration;
+			packageProductDependencies = (
+			);
+			productName = ShieldConfiguration;
+			productReference = 990F16CC0E15D476C3D0BD32 /* ShieldConfiguration.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		BAE6FCB05405D52DEBAE9004 /* ShieldAction */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AFD04D0BD4838A66A75A0465 /* Build configuration list for PBXNativeTarget "ShieldAction" */;
+			buildPhases = (
+				B81521CE07B29AEBDF66C992 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ShieldAction;
+			packageProductDependencies = (
+			);
+			productName = ShieldAction;
+			productReference = 4C94881B9E8A1A7502325A43 /* ShieldAction.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		D1F43B4EE82F75EC17D90A36 /* LiveActivity */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F386EA60F67C2ACE8D2411A3 /* Build configuration list for PBXNativeTarget "LiveActivity" */;
+			buildPhases = (
+				9FBEE6F35CA8A58D43A42798 /* Sources */,
+				6EDEBF20C284436324E77568 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LiveActivity;
+			packageProductDependencies = (
+			);
+			productName = LiveActivity;
+			productReference = A95C9E3D4F41BDF36F708DD3 /* LiveActivity.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		E991B84E8107FDB943CCF7C0 /* MinuteMeterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F8D9E19658A80B5B46EEC0BE /* Build configuration list for PBXNativeTarget "MinuteMeterTests" */;
+			buildPhases = (
+				81F2F15D76C6CE497F655C5F /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				263DF8B43872DE14E678C7F6 /* PBXTargetDependency */,
+			);
+			name = MinuteMeterTests;
+			packageProductDependencies = (
+			);
+			productName = MinuteMeterTests;
+			productReference = 262903BB42DBB2D6F964B177 /* MinuteMeterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D0F00E9B98C8BF3BA8AE8771 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					6A8E138AD7F339BF612E3065 = {
+						DevelopmentTeam = 2GDFC79M88;
+						ProvisioningStyle = Automatic;
+					};
+					97952F33830980056BBD6C96 = {
+						DevelopmentTeam = 2GDFC79M88;
+						ProvisioningStyle = Automatic;
+					};
+					9FE83835BA7F11A77C98C3BC = {
+						DevelopmentTeam = 2GDFC79M88;
+						ProvisioningStyle = Automatic;
+					};
+					BAE6FCB05405D52DEBAE9004 = {
+						DevelopmentTeam = 2GDFC79M88;
+						ProvisioningStyle = Automatic;
+					};
+					D1F43B4EE82F75EC17D90A36 = {
+						DevelopmentTeam = 2GDFC79M88;
+						ProvisioningStyle = Automatic;
+					};
+					E991B84E8107FDB943CCF7C0 = {
+						DevelopmentTeam = 2GDFC79M88;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 7207B01C6B1DCC81C01B418C /* Build configuration list for PBXProject "MinuteMeter" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 419A37F5AD0E9A6078876AA8;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D1F43B4EE82F75EC17D90A36 /* LiveActivity */,
+				97952F33830980056BBD6C96 /* MinuteMeter */,
+				E991B84E8107FDB943CCF7C0 /* MinuteMeterTests */,
+				6A8E138AD7F339BF612E3065 /* Monitor */,
+				BAE6FCB05405D52DEBAE9004 /* ShieldAction */,
+				9FE83835BA7F11A77C98C3BC /* ShieldConfiguration */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		60AE62186001F0F744C2B16B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7940BBF49BFFF70C5909CF4 /* Assets.xcassets in Resources */,
+				D508B9B66F21FF67232B64B8 /* Barlow-Bold.ttf in Resources */,
+				03CB2E6C97DF203DBFF0A8E1 /* Barlow-Medium.ttf in Resources */,
+				3F16CC8FE45355C25E31E2EF /* Barlow-Regular.ttf in Resources */,
+				2030955D5F92CF63319CAB0A /* Barlow-SemiBold.ttf in Resources */,
+				AB334CDE37C2FB025290ADC2 /* BarlowSemiCondensed-Bold.ttf in Resources */,
+				CA0B9CF9E43C4C874E11612B /* BarlowSemiCondensed-Medium.ttf in Resources */,
+				745E794B6E9EE986B448E6E5 /* BarlowSemiCondensed-SemiBold.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6EDEBF20C284436324E77568 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				401AD1304CF4F98434657BD4 /* Barlow-Bold.ttf in Resources */,
+				581363A1860E05E4B44790FC /* Barlow-Medium.ttf in Resources */,
+				1835CB81F873A596B35A806D /* Barlow-Regular.ttf in Resources */,
+				882496C7163B2555A3038940 /* Barlow-SemiBold.ttf in Resources */,
+				FB7F3B7B5435E56F4DB34963 /* BarlowSemiCondensed-Bold.ttf in Resources */,
+				D7BD3879F973F9B8325D6746 /* BarlowSemiCondensed-Medium.ttf in Resources */,
+				DFE839025406D6BC1E1F7428 /* BarlowSemiCondensed-SemiBold.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6DEC132E4F6E9B3F774CE18F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54D7D63708CC5D83104932A8 /* AppGroup.swift in Sources */,
+				04E868BCD8CCA315EB9C1E52 /* DesignTokens.swift in Sources */,
+				4BC43E498994B98CA4FCDC10 /* MinuteMeterApp.swift in Sources */,
+				D4CA502779D730A0EEF23758 /* UnlockActivityAttributes.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81F2F15D76C6CE497F655C5F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DF4812478FF822F6B85CE3B /* MinuteMeterTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92DF67E5F2A1F944DEA2544B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9966A6F281D7A83A83022C14 /* AppGroup.swift in Sources */,
+				019AB4C973449DC6AEE631CC /* DesignTokens.swift in Sources */,
+				C725773A2B004C1C68999FF6 /* ShieldConfigurationExtension.swift in Sources */,
+				FB5E2BFF5826DA161B6B4C75 /* UnlockActivityAttributes.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9FBEE6F35CA8A58D43A42798 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2027BD060C4FD5A041017532 /* AppGroup.swift in Sources */,
+				A9B1F8606C9E5E0E49C1B62F /* DesignTokens.swift in Sources */,
+				3C00E001333EE45D0F27D2B5 /* LiveActivityBundle.swift in Sources */,
+				4DBD67B84F53FA5BE49321B4 /* UnlockActivityAttributes.swift in Sources */,
+				65D9B047AD1EA5E712E6D14A /* UnlockLiveActivity.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B81521CE07B29AEBDF66C992 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99ED7AB5959FC05ECE3A9B41 /* AppGroup.swift in Sources */,
+				FECBE8F5F937DEC791838013 /* DesignTokens.swift in Sources */,
+				9FD05856C444EB987904636D /* ShieldActionExtension.swift in Sources */,
+				70E5F19E11DB7011F525EA4B /* UnlockActivityAttributes.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF18CA77C06A5A0C3B891084 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9FFF8B6F53C521F4FD408FD /* AppGroup.swift in Sources */,
+				F32D8598129D650B437BDE91 /* DesignTokens.swift in Sources */,
+				672E9F36EA1CE6549C708C19 /* DeviceActivityMonitorExtension.swift in Sources */,
+				102B3D704499FED7FD1B002D /* UnlockActivityAttributes.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1377882D073A8E9B267529CB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6A8E138AD7F339BF612E3065 /* Monitor */;
+			targetProxy = 7FF7A5E676B9F3980FAFC4D2 /* PBXContainerItemProxy */;
+		};
+		263DF8B43872DE14E678C7F6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 97952F33830980056BBD6C96 /* MinuteMeter */;
+			targetProxy = 5003B1082BD0D134B577FB86 /* PBXContainerItemProxy */;
+		};
+		860906C7811AA14B9E8F08EE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D1F43B4EE82F75EC17D90A36 /* LiveActivity */;
+			targetProxy = 4BD2BC63CBCA0786832349A4 /* PBXContainerItemProxy */;
+		};
+		87A459B332E561D9586B1E42 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BAE6FCB05405D52DEBAE9004 /* ShieldAction */;
+			targetProxy = 6CE9260F255C936C7A8F8970 /* PBXContainerItemProxy */;
+		};
+		C405C85DC08AB65EC03998A6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9FE83835BA7F11A77C98C3BC /* ShieldConfiguration */;
+			targetProxy = 7438DBE27FEC5A6911D74A34 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0692952D3CACE673528FC5C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ShieldConfiguration/ShieldConfiguration.entitlements;
+				INFOPLIST_FILE = ShieldConfiguration/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dylankuster.MinuteMeter.ShieldConfiguration;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1B45107C67724698691072E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 2GDFC79M88;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		1CACD337D452655D22D45416 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dylankuster.MinuteMeterTests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MinuteMeter.app/MinuteMeter";
+			};
+			name = Release;
+		};
+		2FFCFBC4CAD13B2720FB5596 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 2GDFC79M88;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		42A7D3C3EB1D27E607C0571D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MinuteMeter/MinuteMeter.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = MinuteMeter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dylankuster.MinuteMeter;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4B53BED807CDAD8F83947DA5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ShieldAction/ShieldAction.entitlements;
+				INFOPLIST_FILE = ShieldAction/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dylankuster.MinuteMeter.ShieldAction;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5B4AB97A4FB0EC99A06C2E84 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ShieldAction/ShieldAction.entitlements;
+				INFOPLIST_FILE = ShieldAction/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dylankuster.MinuteMeter.ShieldAction;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		72D32EBEDA9238C10370B005 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = LiveActivity/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dylankuster.MinuteMeter.LiveActivity;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		790AA78ACBD468C6E6E3F332 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Monitor/Monitor.entitlements;
+				INFOPLIST_FILE = Monitor/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dylankuster.MinuteMeter.Monitor;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C42E565A8C0C77536D9CFE5B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Monitor/Monitor.entitlements;
+				INFOPLIST_FILE = Monitor/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dylankuster.MinuteMeter.Monitor;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EC5C7CCAAD29C618D6D88B9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ShieldConfiguration/ShieldConfiguration.entitlements;
+				INFOPLIST_FILE = ShieldConfiguration/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dylankuster.MinuteMeter.ShieldConfiguration;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EF245E9B4091959B7613577E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MinuteMeter/MinuteMeter.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = MinuteMeter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dylankuster.MinuteMeter;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F14FD15EAA9147BCFC422D5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = LiveActivity/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dylankuster.MinuteMeter.LiveActivity;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FEB6DF1E179A914EDC8EAFDB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dylankuster.MinuteMeterTests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MinuteMeter.app/MinuteMeter";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0ADBE0F1C720C447AEB9E901 /* Build configuration list for PBXNativeTarget "MinuteMeter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF245E9B4091959B7613577E /* Debug */,
+				42A7D3C3EB1D27E607C0571D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		2FFF0BC98AA4AECE027188B6 /* Build configuration list for PBXNativeTarget "Monitor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C42E565A8C0C77536D9CFE5B /* Debug */,
+				790AA78ACBD468C6E6E3F332 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		3516E05ED77DBEA7229A53A6 /* Build configuration list for PBXNativeTarget "ShieldConfiguration" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0692952D3CACE673528FC5C5 /* Debug */,
+				EC5C7CCAAD29C618D6D88B9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		7207B01C6B1DCC81C01B418C /* Build configuration list for PBXProject "MinuteMeter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2FFCFBC4CAD13B2720FB5596 /* Debug */,
+				1B45107C67724698691072E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		AFD04D0BD4838A66A75A0465 /* Build configuration list for PBXNativeTarget "ShieldAction" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B4AB97A4FB0EC99A06C2E84 /* Debug */,
+				4B53BED807CDAD8F83947DA5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		F386EA60F67C2ACE8D2411A3 /* Build configuration list for PBXNativeTarget "LiveActivity" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				72D32EBEDA9238C10370B005 /* Debug */,
+				F14FD15EAA9147BCFC422D5F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		F8D9E19658A80B5B46EEC0BE /* Build configuration list for PBXNativeTarget "MinuteMeterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FEB6DF1E179A914EDC8EAFDB /* Debug */,
+				1CACD337D452655D22D45416 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D0F00E9B98C8BF3BA8AE8771 /* Project object */;
+}
