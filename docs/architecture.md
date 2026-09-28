@@ -18,16 +18,18 @@ All targets share one App Group, where the shared data lives.
 ## Unlock
 
 1. The app checks the chosen length against time left.
-2. It adds the minutes to today's history entry right away, so time left drops at the start. It saves the current unlock (start and end).
-3. It starts the Live Activity and sends the activity's push token and end time to the server. It doesn't wait for the server, so unlocking works offline.
+2. It schedules the Monitor to relock at the end. If scheduling fails, the unlock stops here and the apps stay locked.
+3. It adds the minutes to today's history entry right away, so time left drops at the start. It saves the current unlock: start, end, and the day it was charged to.
 4. It removes the shields.
-5. It schedules the Monitor to relock at the end.
+5. It starts the Live Activity and sends the activity's push token and end time to the server. It doesn't wait for the server, so unlocking works offline.
 
-**Lock now** relocks, cancels the schedule, ends the Live Activity, and subtracts the unused minutes from today's entry. The server's push later does nothing, because the activity has already ended.
+The relock is scheduled before the shields come off. In the other order, a failed schedule would leave the apps unlocked with nothing to relock them.
+
+**Lock now** relocks, cancels the schedule, ends the Live Activity, and clears the current unlock. It refunds the unused minutes, rounded down, to the day the unlock was charged to, and never takes that day's minutes used below 0. That way an unlock that crosses midnight can't create extra time on the new day. The server's push later does nothing, because the activity has already ended.
 
 ## Relock
 
-Only the Monitor relocks, using a one-time DeviceActivity schedule that ends when the unlock ends.
+Only the Monitor relocks, using a one-time DeviceActivity schedule that ends when the unlock ends. It also clears the current unlock, so a finished unlock can't be refunded later.
 
 - **Why not the server:** a server can only reach the app through silent pushes. iOS doesn't guarantee their delivery and never delivers them to an app the user has swiped away, so swiping the app away would keep apps unlocked. iOS runs the Monitor on schedule either way.
 - **Under 15 minutes:** DeviceActivity's minimum interval is 15 minutes. For shorter unlocks we schedule 15 minutes and relock on the schedule's warning callback, which fires at the real end.
@@ -47,16 +49,28 @@ The Monitor's daily schedule runs at 00:00:
 - Pending app removals take effect.
 - A new history entry starts for the day.
 
-Removals and limit changes wait until midnight so they can't be used to get more time today. Adding apps takes effect immediately. If the phone was off at midnight, the app runs the same step the next time it opens.
+Removals and limit changes wait until midnight so they can't be used to get more time today. Adding apps takes effect immediately.
+
+If the phone was off at midnight, the app runs the same step the next time it opens. The step saves the date it last ran and does nothing if it already ran today, so running it twice is harmless. Until today's entry exists, anything reading it treats today as 0 minutes used at today's limit.
 
 ## Data
 
 JSON files in the App Group. There are no accounts and nothing is stored on a server, so deleting the app deletes its history.
 
-- **State:** the limit, the pending limit, the picked apps (`FamilyActivitySelection`), pending removals, and the current unlock.
+- **State:** the limit, the pending limit, the picked apps (`FamilyActivitySelection`), pending removals, the current unlock, and the date the midnight step last ran.
 - **History:** one entry per day, holding minutes used, that day's limit, and the number of blocked apps and categories.
 
 Time left today is today's limit minus today's minutes used.
+
+The app and the Monitor are separate processes that write the same files, and the shield reads them at any time. Every write replaces the whole file atomically and goes through `NSFileCoordinator`, so a write is never lost or read half-finished.
+
+## Accepted bypasses
+
+Someone determined to get around their own limit can. These can't be prevented without making the app a parental control or adding a trusted server clock, so we accept them:
+
+- **Turning off Screen Time access** in iOS Settings removes every shield. Settings in the app shows the access status.
+- **Deleting the app** removes the shields and the history.
+- **Changing the device clock** can start a new day early. Clearing the unlock on relock stops it from making a finished unlock refundable.
 
 ## Paid version
 
