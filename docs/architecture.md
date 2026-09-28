@@ -62,7 +62,7 @@ Until today's entry exists, the shield reads today as 0 minutes used, at the pen
 JSON files in the App Group. There are no accounts and nothing is stored on a server, so deleting the app deletes its history.
 
 - **State:** the limit, the pending limit, the picked apps (`FamilyActivitySelection`), pending removals, and the current unlock.
-- **History:** one entry per day, holding minutes used, that day's limit, and the number of blocked apps and categories.
+- **History:** `history.json`, a dictionary keyed by calendar day as text (`"2026-09-28"`), so there's one entry per day and today's is a direct lookup. Each entry holds minutes used, that day's limit, and the number of blocked apps and categories. Days are text rather than timestamps because a day means "this calendar day where you are", and a timestamp needs a time zone to become a day (see #3).
 
 Time left today is today's limit minus today's minutes used.
 
