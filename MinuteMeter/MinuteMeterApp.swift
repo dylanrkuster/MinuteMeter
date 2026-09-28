@@ -2,14 +2,11 @@ import SwiftUI
 
 @main
 struct MinuteMeterApp: App {
+    @State private var today = TodayModel()
+
     var body: some Scene {
         WindowGroup {
-            ZStack {
-                Palette.background.ignoresSafeArea()
-                Text("Minute Meter")
-                    .textStyle(.title)
-                    .foregroundStyle(Palette.textPrimary)
-            }
+            TodayView(model: today)
         }
     }
 }

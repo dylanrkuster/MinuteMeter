@@ -11,9 +11,12 @@
 		029DA24D993BC6B04D773643 /* TimeMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090A9D1A63EFA81C08010A17 /* TimeMath.swift */; };
 		03CB2E6C97DF203DBFF0A8E1 /* Barlow-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6F7F7B92B7AD117E8789E42E /* Barlow-Medium.ttf */; };
 		04E868BCD8CCA315EB9C1E52 /* DesignTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF109627DAD8B5DF59826C56 /* DesignTokens.swift */; };
+		096DFA15C151A8670B265B6C /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C991375A848D9C09DCE0252 /* TodayView.swift */; };
 		102B3D704499FED7FD1B002D /* UnlockActivityAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFFF9E182870F3B24D8AE0A /* UnlockActivityAttributes.swift */; };
 		173D61195173D832A015F7A1 /* TimeMathTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB450C071F4C088B5351C9ED /* TimeMathTests.swift */; };
 		1835CB81F873A596B35A806D /* Barlow-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB4A47C9494BD63439517ADC /* Barlow-Regular.ttf */; };
+		18C085D04C71785FBA52EE09 /* TodayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E60FAC780DA2B139F38EF4F /* TodayModel.swift */; };
+		1919789D55F0955D556BB579 /* TodayModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28147E8DE3BB40D5E954B75 /* TodayModelTests.swift */; };
 		1C02D7CBCF197E801E7E6D12 /* DayEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFF8CC8F1DBE65C79F0C72D /* DayEntry.swift */; };
 		2027BD060C4FD5A041017532 /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D38D0FA24D76DC97A711302 /* AppGroup.swift */; };
 		2030955D5F92CF63319CAB0A /* Barlow-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 439711EE0DA5B6B2B579A471 /* Barlow-SemiBold.ttf */; };
@@ -52,6 +55,7 @@
 		CA0B9CF9E43C4C874E11612B /* BarlowSemiCondensed-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CFC955D02DD6858FBD10B537 /* BarlowSemiCondensed-Medium.ttf */; };
 		CA1D21FAAAA0F1A69F6FF0D5 /* DayEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFF8CC8F1DBE65C79F0C72D /* DayEntry.swift */; };
 		CC2A18E0AE9B7641AE51C125 /* Monitor.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 79833ED726EE2E5AD57467CE /* Monitor.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		CEC121F3F67E3721287D0510 /* TimeTape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3E4A59B3E539BBC03BEAD4 /* TimeTape.swift */; };
 		D4CA502779D730A0EEF23758 /* UnlockActivityAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFFF9E182870F3B24D8AE0A /* UnlockActivityAttributes.swift */; };
 		D508B9B66F21FF67232B64B8 /* Barlow-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DF7D176890C0AF384967CF11 /* Barlow-Bold.ttf */; };
 		D7BD3879F973F9B8325D6746 /* BarlowSemiCondensed-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CFC955D02DD6858FBD10B537 /* BarlowSemiCondensed-Medium.ttf */; };
@@ -127,14 +131,17 @@
 		0D186F5848E58D0FE11DE60B /* HistoryStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryStoreTests.swift; sourceTree = "<group>"; };
 		262903BB42DBB2D6F964B177 /* MinuteMeterTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = MinuteMeterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		29CBD32B875F5F6FD43C7E76 /* BarlowSemiCondensed-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BarlowSemiCondensed-Bold.ttf"; sourceTree = "<group>"; };
+		2C991375A848D9C09DCE0252 /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
 		2FFF8CC8F1DBE65C79F0C72D /* DayEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayEntry.swift; sourceTree = "<group>"; };
 		341F7DF6B8BEBC0FB50DF5BC /* MinuteMeter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MinuteMeter.entitlements; sourceTree = "<group>"; };
 		3D0189FC31A4C803502274CA /* LiveActivityBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveActivityBundle.swift; sourceTree = "<group>"; };
+		3E60FAC780DA2B139F38EF4F /* TodayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayModel.swift; sourceTree = "<group>"; };
 		402F77169E70E1F79DAA4C7C /* ShieldConfiguration.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShieldConfiguration.entitlements; sourceTree = "<group>"; };
 		439711EE0DA5B6B2B579A471 /* Barlow-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Barlow-SemiBold.ttf"; sourceTree = "<group>"; };
 		4BFFF9E182870F3B24D8AE0A /* UnlockActivityAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockActivityAttributes.swift; sourceTree = "<group>"; };
 		4C94881B9E8A1A7502325A43 /* ShieldAction.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = ShieldAction.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CE3C50C79757818234B90EF /* UnlockLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockLiveActivity.swift; sourceTree = "<group>"; };
+		5C3E4A59B3E539BBC03BEAD4 /* TimeTape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTape.swift; sourceTree = "<group>"; };
 		5EDE70A5916C9AE75A483BDE /* ShieldAction.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShieldAction.entitlements; sourceTree = "<group>"; };
 		6236C0C5117737FC3ABF3053 /* ShieldConfigurationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShieldConfigurationExtension.swift; sourceTree = "<group>"; };
 		6F7F7B92B7AD117E8789E42E /* Barlow-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Barlow-Medium.ttf"; sourceTree = "<group>"; };
@@ -148,6 +155,7 @@
 		990F16CC0E15D476C3D0BD32 /* ShieldConfiguration.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = ShieldConfiguration.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		A95C9E3D4F41BDF36F708DD3 /* LiveActivity.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = LiveActivity.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFB993310CB710E4B22D85F5 /* BarlowSemiCondensed-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BarlowSemiCondensed-SemiBold.ttf"; sourceTree = "<group>"; };
+		B28147E8DE3BB40D5E954B75 /* TodayModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayModelTests.swift; sourceTree = "<group>"; };
 		B7BC9A7D234DCD1CF103B6DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		BB450C071F4C088B5351C9ED /* TimeMathTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeMathTests.swift; sourceTree = "<group>"; };
 		CFC955D02DD6858FBD10B537 /* BarlowSemiCondensed-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BarlowSemiCondensed-Medium.ttf"; sourceTree = "<group>"; };
@@ -200,9 +208,28 @@
 			);
 			sourceTree = "<group>";
 		};
+		61272CF57E7673507C3AD2A7 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				5C3E4A59B3E539BBC03BEAD4 /* TimeTape.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		64A3526960D7FC21182EB71C /* Today */ = {
+			isa = PBXGroup;
+			children = (
+				3E60FAC780DA2B139F38EF4F /* TodayModel.swift */,
+				2C991375A848D9C09DCE0252 /* TodayView.swift */,
+			);
+			path = Today;
+			sourceTree = "<group>";
+		};
 		6BE868E7ED9C817D5796AFF1 /* MinuteMeter */ = {
 			isa = PBXGroup;
 			children = (
+				61272CF57E7673507C3AD2A7 /* Components */,
+				64A3526960D7FC21182EB71C /* Today */,
 				7A50EADC48B22804A4B39C40 /* Assets.xcassets */,
 				F83F1F4F1AF68B9212DD8F8A /* Info.plist */,
 				341F7DF6B8BEBC0FB50DF5BC /* MinuteMeter.entitlements */,
@@ -259,6 +286,7 @@
 			children = (
 				0D186F5848E58D0FE11DE60B /* HistoryStoreTests.swift */,
 				BB450C071F4C088B5351C9ED /* TimeMathTests.swift */,
+				B28147E8DE3BB40D5E954B75 /* TodayModelTests.swift */,
 			);
 			path = MinuteMeterTests;
 			sourceTree = "<group>";
@@ -492,6 +520,9 @@
 				941D42E4219A78000C3835CB /* HistoryStore.swift in Sources */,
 				4BC43E498994B98CA4FCDC10 /* MinuteMeterApp.swift in Sources */,
 				5E554BCBD986E838F679C1F4 /* TimeMath.swift in Sources */,
+				CEC121F3F67E3721287D0510 /* TimeTape.swift in Sources */,
+				18C085D04C71785FBA52EE09 /* TodayModel.swift in Sources */,
+				096DFA15C151A8670B265B6C /* TodayView.swift in Sources */,
 				D4CA502779D730A0EEF23758 /* UnlockActivityAttributes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -502,6 +533,7 @@
 			files = (
 				805F0B7715A47ED4CE4337B6 /* HistoryStoreTests.swift in Sources */,
 				173D61195173D832A015F7A1 /* TimeMathTests.swift in Sources */,
+				1919789D55F0955D556BB579 /* TodayModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
