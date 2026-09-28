@@ -18,7 +18,7 @@ final class HistoryStoreTests: XCTestCase {
         let json = #"{"2026-09-28": {"minutesUsed": 48, "limitMinutes": 120, "lockedCount": 6}}"#
         try Data(json.utf8).write(to: fileURL)
 
-        let entry = HistoryStore(fileURL: fileURL).entry(for: "2026-09-28")
+        let entry = try HistoryStore(fileURL: fileURL).entry(for: "2026-09-28")
 
         XCTAssertEqual(entry, DayEntry(minutesUsed: 48, limitMinutes: 120, lockedCount: 6))
     }
@@ -27,20 +27,39 @@ final class HistoryStoreTests: XCTestCase {
         let json = #"{"2026-09-27": {"minutesUsed": 48, "limitMinutes": 120, "lockedCount": 6}}"#
         try Data(json.utf8).write(to: fileURL)
 
-        XCTAssertNil(HistoryStore(fileURL: fileURL).entry(for: "2026-09-28"))
+        XCTAssertNil(try HistoryStore(fileURL: fileURL).entry(for: "2026-09-28"))
     }
 
-    func testMissingFileReadsAsEmpty() {
-        XCTAssertEqual(HistoryStore(fileURL: fileURL).readAll(), [:])
+    func testMissingFileIsEmptyHistory() throws {
+        XCTAssertEqual(try HistoryStore(fileURL: fileURL).readAll(), [:])
     }
 
-    func testUnreadableFileReadsAsEmpty() throws {
+    func testUndecodableFileThrows() throws {
         try Data("not json".utf8).write(to: fileURL)
 
-        XCTAssertEqual(HistoryStore(fileURL: fileURL).readAll(), [:])
+        XCTAssertThrowsError(try HistoryStore(fileURL: fileURL).readAll()) { error in
+            guard case HistoryStore.ReadError.undecodable = error else {
+                return XCTFail("Expected undecodable, got \(error)")
+            }
+        }
     }
 
-    func testNoContainerReadsAsEmpty() {
-        XCTAssertEqual(HistoryStore(fileURL: nil).readAll(), [:])
+    func testUnreadableFileThrows() throws {
+        // A directory where the file should be can't be read as data.
+        try FileManager.default.createDirectory(at: fileURL, withIntermediateDirectories: false)
+
+        XCTAssertThrowsError(try HistoryStore(fileURL: fileURL).readAll()) { error in
+            guard case HistoryStore.ReadError.unreadable = error else {
+                return XCTFail("Expected unreadable, got \(error)")
+            }
+        }
+    }
+
+    func testNoContainerThrows() {
+        XCTAssertThrowsError(try HistoryStore(fileURL: nil).readAll()) { error in
+            guard case HistoryStore.ReadError.noContainer = error else {
+                return XCTFail("Expected noContainer, got \(error)")
+            }
+        }
     }
 }

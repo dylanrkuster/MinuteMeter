@@ -12,7 +12,7 @@ struct TodayView: View {
             timeLeft
             TimeTape(
                 totalMinutes: model.limitMinutes,
-                remainingMinutes: model.leftMinutes,
+                remainingMinutes: model.leftMinutes ?? 0,
                 labels: Self.tapeLabels(limitMinutes: model.limitMinutes)
             )
             .padding(.top, 18)
@@ -31,7 +31,7 @@ struct TodayView: View {
     }
 
     private var header: some View {
-        Text(Self.dateFormatter.string(from: model.today))
+        Text(model.dateText)
             .textStyle(.date)
             .foregroundStyle(Palette.textPrimary)
             .frame(height: Metrics.headerButton)
@@ -45,17 +45,17 @@ struct TodayView: View {
                 .padding(.top, 22)
 
             HStack(alignment: .lastTextBaseline) {
-                Text(TimeMath.format(minutes: model.leftMinutes))
+                Text(Self.format(model.leftMinutes))
                     .textStyle(.heroTime)
                     .lineHeight(0.92, fontSize: 116)
                     .foregroundStyle(Palette.textPrimary)
                     .accessibilityLabel("Left today")
-                    .accessibilityValue(TimeMath.spoken(minutes: model.leftMinutes))
+                    .accessibilityValue(model.leftMinutes.map(TimeMath.spoken) ?? "Unknown")
                     .accessibilityIdentifier("timeLeft")
                 Spacer()
                 VStack(alignment: .trailing, spacing: 4) {
                     Text("Of \(TimeMath.format(minutes: model.limitMinutes))")
-                    Text("\(TimeMath.format(minutes: model.usedMinutes)) used")
+                    Text("\(Self.format(model.usedMinutes)) used")
                 }
                 .textStyle(.label)
                 .foregroundStyle(Palette.textSecondary)
@@ -71,11 +71,10 @@ struct TodayView: View {
         }
     }
 
-    private static let dateFormatter: DateFormatter = {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "EEE d MMM"
-        return formatter
-    }()
+    /// `h:mm`, or a placeholder when history couldn't be read.
+    private static func format(_ minutes: Int?) -> String {
+        minutes.map { TimeMath.format(minutes: $0) } ?? "–:––"
+    }
 }
 
 #Preview {

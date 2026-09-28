@@ -68,6 +68,8 @@ Time left today is today's limit minus today's minutes used.
 
 The app and the Monitor are separate processes that write the same files, and the shield reads them at any time. Every write replaces the whole file atomically and goes through `NSFileCoordinator`, so a write is never lost or read half-finished.
 
+A missing file just means no data yet. Any other read failure is an error: screens show an unknown value instead of the full limit, and nothing saves over a file it couldn't read.
+
 ## Accepted bypasses
 
 These are obvious to anyone who tries them, and the app stops working when they do:
