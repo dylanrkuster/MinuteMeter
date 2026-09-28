@@ -31,15 +31,20 @@
 		61A1674A0B2D0B12A6CE8D75 /* DayEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFF8CC8F1DBE65C79F0C72D /* DayEntry.swift */; };
 		64B634D823FDF55B217D443A /* DayEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFF8CC8F1DBE65C79F0C72D /* DayEntry.swift */; };
 		65D9B047AD1EA5E712E6D14A /* UnlockLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE3C50C79757818234B90EF /* UnlockLiveActivity.swift */; };
+		670A6A93F9C8864B46903FE4 /* HistoryStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878D7361598E79BFA9A3454A /* HistoryStore.swift */; };
 		672E9F36EA1CE6549C708C19 /* DeviceActivityMonitorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9D293CE7C70FC4E62319EC /* DeviceActivityMonitorExtension.swift */; };
 		6CD7CFDE0A022F761C1B7E25 /* TimeMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090A9D1A63EFA81C08010A17 /* TimeMath.swift */; };
 		70E5F19E11DB7011F525EA4B /* UnlockActivityAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFFF9E182870F3B24D8AE0A /* UnlockActivityAttributes.swift */; };
 		745E794B6E9EE986B448E6E5 /* BarlowSemiCondensed-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFB993310CB710E4B22D85F5 /* BarlowSemiCondensed-SemiBold.ttf */; };
+		805F0B7715A47ED4CE4337B6 /* HistoryStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D186F5848E58D0FE11DE60B /* HistoryStoreTests.swift */; };
 		882496C7163B2555A3038940 /* Barlow-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 439711EE0DA5B6B2B579A471 /* Barlow-SemiBold.ttf */; };
 		8B6782DAD03C3D3251CD5DA3 /* TimeMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090A9D1A63EFA81C08010A17 /* TimeMath.swift */; };
+		8C67D0C2E69AACD8E93EB54D /* HistoryStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878D7361598E79BFA9A3454A /* HistoryStore.swift */; };
+		941D42E4219A78000C3835CB /* HistoryStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878D7361598E79BFA9A3454A /* HistoryStore.swift */; };
 		9966A6F281D7A83A83022C14 /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D38D0FA24D76DC97A711302 /* AppGroup.swift */; };
 		99ED7AB5959FC05ECE3A9B41 /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D38D0FA24D76DC97A711302 /* AppGroup.swift */; };
 		9FD05856C444EB987904636D /* ShieldActionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7082899C25FE130749A7A0E3 /* ShieldActionExtension.swift */; };
+		A6B9A74BA7D040EE40252F74 /* HistoryStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878D7361598E79BFA9A3454A /* HistoryStore.swift */; };
 		A9B1F8606C9E5E0E49C1B62F /* DesignTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF109627DAD8B5DF59826C56 /* DesignTokens.swift */; };
 		AB334CDE37C2FB025290ADC2 /* BarlowSemiCondensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 29CBD32B875F5F6FD43C7E76 /* BarlowSemiCondensed-Bold.ttf */; };
 		AC59ADB7FFB3E8D604185800 /* ShieldConfiguration.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 990F16CC0E15D476C3D0BD32 /* ShieldConfiguration.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -57,6 +62,7 @@
 		F9FFF8B6F53C521F4FD408FD /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D38D0FA24D76DC97A711302 /* AppGroup.swift */; };
 		FB5E2BFF5826DA161B6B4C75 /* UnlockActivityAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFFF9E182870F3B24D8AE0A /* UnlockActivityAttributes.swift */; };
 		FB7F3B7B5435E56F4DB34963 /* BarlowSemiCondensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 29CBD32B875F5F6FD43C7E76 /* BarlowSemiCondensed-Bold.ttf */; };
+		FCC549FC5C1E309204AE02A7 /* HistoryStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878D7361598E79BFA9A3454A /* HistoryStore.swift */; };
 		FECBE8F5F937DEC791838013 /* DesignTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF109627DAD8B5DF59826C56 /* DesignTokens.swift */; };
 /* End PBXBuildFile section */
 
@@ -118,6 +124,7 @@
 /* Begin PBXFileReference section */
 		090A9D1A63EFA81C08010A17 /* TimeMath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeMath.swift; sourceTree = "<group>"; };
 		0C68322C0BE0DC1621A9F258 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		0D186F5848E58D0FE11DE60B /* HistoryStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryStoreTests.swift; sourceTree = "<group>"; };
 		262903BB42DBB2D6F964B177 /* MinuteMeterTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = MinuteMeterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		29CBD32B875F5F6FD43C7E76 /* BarlowSemiCondensed-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BarlowSemiCondensed-Bold.ttf"; sourceTree = "<group>"; };
 		2FFF8CC8F1DBE65C79F0C72D /* DayEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayEntry.swift; sourceTree = "<group>"; };
@@ -135,6 +142,7 @@
 		79833ED726EE2E5AD57467CE /* Monitor.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = Monitor.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A50EADC48B22804A4B39C40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7D38D0FA24D76DC97A711302 /* AppGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppGroup.swift; sourceTree = "<group>"; };
+		878D7361598E79BFA9A3454A /* HistoryStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryStore.swift; sourceTree = "<group>"; };
 		8C9D293CE7C70FC4E62319EC /* DeviceActivityMonitorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceActivityMonitorExtension.swift; sourceTree = "<group>"; };
 		8D6BC933A63B231C836E86BA /* Monitor.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Monitor.entitlements; sourceTree = "<group>"; };
 		990F16CC0E15D476C3D0BD32 /* ShieldConfiguration.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = ShieldConfiguration.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -249,6 +257,7 @@
 		D88198B570FE38B5CA1EC3FF /* MinuteMeterTests */ = {
 			isa = PBXGroup;
 			children = (
+				0D186F5848E58D0FE11DE60B /* HistoryStoreTests.swift */,
 				BB450C071F4C088B5351C9ED /* TimeMathTests.swift */,
 			);
 			path = MinuteMeterTests;
@@ -261,6 +270,7 @@
 				7D38D0FA24D76DC97A711302 /* AppGroup.swift */,
 				2FFF8CC8F1DBE65C79F0C72D /* DayEntry.swift */,
 				EF109627DAD8B5DF59826C56 /* DesignTokens.swift */,
+				878D7361598E79BFA9A3454A /* HistoryStore.swift */,
 				090A9D1A63EFA81C08010A17 /* TimeMath.swift */,
 				4BFFF9E182870F3B24D8AE0A /* UnlockActivityAttributes.swift */,
 			);
@@ -479,6 +489,7 @@
 				54D7D63708CC5D83104932A8 /* AppGroup.swift in Sources */,
 				CA1D21FAAAA0F1A69F6FF0D5 /* DayEntry.swift in Sources */,
 				04E868BCD8CCA315EB9C1E52 /* DesignTokens.swift in Sources */,
+				941D42E4219A78000C3835CB /* HistoryStore.swift in Sources */,
 				4BC43E498994B98CA4FCDC10 /* MinuteMeterApp.swift in Sources */,
 				5E554BCBD986E838F679C1F4 /* TimeMath.swift in Sources */,
 				D4CA502779D730A0EEF23758 /* UnlockActivityAttributes.swift in Sources */,
@@ -489,6 +500,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				805F0B7715A47ED4CE4337B6 /* HistoryStoreTests.swift in Sources */,
 				173D61195173D832A015F7A1 /* TimeMathTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -500,6 +512,7 @@
 				9966A6F281D7A83A83022C14 /* AppGroup.swift in Sources */,
 				61A1674A0B2D0B12A6CE8D75 /* DayEntry.swift in Sources */,
 				019AB4C973449DC6AEE631CC /* DesignTokens.swift in Sources */,
+				8C67D0C2E69AACD8E93EB54D /* HistoryStore.swift in Sources */,
 				C725773A2B004C1C68999FF6 /* ShieldConfigurationExtension.swift in Sources */,
 				3E82555EFF6E24D5ED03F998 /* TimeMath.swift in Sources */,
 				FB5E2BFF5826DA161B6B4C75 /* UnlockActivityAttributes.swift in Sources */,
@@ -513,6 +526,7 @@
 				2027BD060C4FD5A041017532 /* AppGroup.swift in Sources */,
 				64B634D823FDF55B217D443A /* DayEntry.swift in Sources */,
 				A9B1F8606C9E5E0E49C1B62F /* DesignTokens.swift in Sources */,
+				FCC549FC5C1E309204AE02A7 /* HistoryStore.swift in Sources */,
 				3C00E001333EE45D0F27D2B5 /* LiveActivityBundle.swift in Sources */,
 				8B6782DAD03C3D3251CD5DA3 /* TimeMath.swift in Sources */,
 				4DBD67B84F53FA5BE49321B4 /* UnlockActivityAttributes.swift in Sources */,
@@ -527,6 +541,7 @@
 				99ED7AB5959FC05ECE3A9B41 /* AppGroup.swift in Sources */,
 				1C02D7CBCF197E801E7E6D12 /* DayEntry.swift in Sources */,
 				FECBE8F5F937DEC791838013 /* DesignTokens.swift in Sources */,
+				670A6A93F9C8864B46903FE4 /* HistoryStore.swift in Sources */,
 				9FD05856C444EB987904636D /* ShieldActionExtension.swift in Sources */,
 				029DA24D993BC6B04D773643 /* TimeMath.swift in Sources */,
 				70E5F19E11DB7011F525EA4B /* UnlockActivityAttributes.swift in Sources */,
@@ -541,6 +556,7 @@
 				2CA6A757A98A1B0609BB304B /* DayEntry.swift in Sources */,
 				F32D8598129D650B437BDE91 /* DesignTokens.swift in Sources */,
 				672E9F36EA1CE6549C708C19 /* DeviceActivityMonitorExtension.swift in Sources */,
+				A6B9A74BA7D040EE40252F74 /* HistoryStore.swift in Sources */,
 				6CD7CFDE0A022F761C1B7E25 /* TimeMath.swift in Sources */,
 				102B3D704499FED7FD1B002D /* UnlockActivityAttributes.swift in Sources */,
 			);
