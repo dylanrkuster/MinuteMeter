@@ -53,8 +53,13 @@ jobs:
             4. Check that the PR description explains what was built and why, as
                CLAUDE.md requires.
 
-            Post an inline comment for each specific problem. Then post one summary
-            comment with:
+            Before commenting, read the existing inline comments with
+            `gh api repos/${{ github.repository }}/pulls/${{ github.event.pull_request.number }}/comments`.
+            Don't repeat a problem that already has a comment thread.
+
+            Post an inline comment for each new problem. Then write one summary with
+            `gh pr comment ${{ github.event.pull_request.number }} --edit-last --create-if-none`,
+            so each review replaces the previous summary instead of adding another. Include:
             - Issue coverage: each acceptance criterion, marked met or not met.
             - Findings, most severe first.
             - Verdict: ready to merge, or changes needed.
@@ -62,4 +67,4 @@ jobs:
             Be concise. Skip style nits that don't affect correctness or clarity.
           claude_args: |
             --model claude-opus-5-5
-            --allowedTools "mcp__github_inline_comment__create_inline_comment,Bash(gh issue view:*),Bash(gh pr comment:*),Bash(gh pr diff:*),Bash(gh pr view:*)"
+            --allowedTools "mcp__github_inline_comment__create_inline_comment,Bash(gh issue view:*),Bash(gh pr comment:*),Bash(gh pr diff:*),Bash(gh pr view:*),Bash(gh api repos/${{ github.repository }}/pulls/${{ github.event.pull_request.number }}/comments:*)"
