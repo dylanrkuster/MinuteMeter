@@ -51,13 +51,17 @@ The Monitor's daily schedule runs at 00:00:
 
 Removals and limit changes wait until midnight so they can't be used to get more time today. Adding apps takes effect immediately.
 
-If the phone was off at midnight, the app runs the same step the next time it opens. The step saves the date it last ran and does nothing if it already ran today, so running it twice is harmless. Until today's entry exists, anything reading it treats today as 0 minutes used at today's limit.
+If the phone was off at midnight, the app runs the same step the next time it opens.
+
+Only the midnight step creates a day's entry; everything else updates an existing one. So today's entry existing means the step already ran, and running it twice does nothing. The check and the write happen inside one coordinated write, so the app and the Monitor can't both create the entry.
+
+Until today's entry exists, the shield reads today as 0 minutes used, at the pending limit if one is waiting and otherwise the current limit.
 
 ## Data
 
 JSON files in the App Group. There are no accounts and nothing is stored on a server, so deleting the app deletes its history.
 
-- **State:** the limit, the pending limit, the picked apps (`FamilyActivitySelection`), pending removals, the current unlock, and the date the midnight step last ran.
+- **State:** the limit, the pending limit, the picked apps (`FamilyActivitySelection`), pending removals, and the current unlock.
 - **History:** one entry per day, holding minutes used, that day's limit, and the number of blocked apps and categories.
 
 Time left today is today's limit minus today's minutes used.
@@ -66,11 +70,15 @@ The app and the Monitor are separate processes that write the same files, and th
 
 ## Accepted bypasses
 
-Someone determined to get around their own limit can. These can't be prevented without making the app a parental control or adding a trusted server clock, so we accept them:
+These are obvious to anyone who tries them, and the app stops working when they do:
 
-- **Turning off Screen Time access** in iOS Settings removes every shield. Settings in the app shows the access status.
+- **Turning off Screen Time access** in iOS Settings removes every shield.
 - **Deleting the app** removes the shields and the history.
-- **Changing the device clock** can start a new day early. Clearing the unlock on relock stops it from making a finished unlock refundable.
+- **Setting the clock forward** starts a new day early.
+
+## Known issues
+
+- **Time zone changes** move midnight, which can start a new day early or make one longer. Tracked in #3.
 
 ## Paid version
 
