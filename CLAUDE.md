@@ -16,11 +16,10 @@ A minimal iOS screen time app. This is a personal project: quality over speed, a
 The owner follows Mitchell Hashimoto's "whiteboard defense": they must be able to explain and defend every shipped system at a high level without knowing each line. Claude writes the code; the owner owns the decisions.
 
 - Before building anything non-trivial, propose the approach and wait for agreement.
-- In every PR description, and when reporting finished work, explain:
-  - What was built and why.
+- In every PR description, and when reporting finished work, explain what was built and why. When they apply, also cover:
   - The data structures and design patterns used, and why they beat the alternatives.
   - Where it fails: failure modes, and what a careless or malicious user could do.
-  - Anything that couldn't be verified, such as behavior that only works on a device.
+  - Anything that couldn't be verified, such as behavior that only works on a device. The owner checks every change on a device as QA.
 - Raise tradeoffs and assumptions explicitly. Don't bury decisions in code.
 - Keep `docs/architecture.md` current when a PR changes the design.
 - Stay concise: short and plain, but never drop what the owner needs to defend the design.

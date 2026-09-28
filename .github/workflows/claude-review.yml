@@ -45,8 +45,8 @@ jobs:
                - Missing or weak tests.
                - Anything that contradicts docs/architecture.md, or a design change that
                  doesn't update it.
-            4. Check that the PR description explains what was built and why, the data
-               structures and patterns used, and where it fails, as CLAUDE.md requires.
+            4. Check that the PR description explains what was built and why, as
+               CLAUDE.md requires.
 
             Post an inline comment for each specific problem. Then post one summary
             comment with:
