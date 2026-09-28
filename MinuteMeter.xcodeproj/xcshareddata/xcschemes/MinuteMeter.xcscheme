@@ -50,6 +50,17 @@
                ReferencedContainer = "container:MinuteMeter.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "39F7A742E72E6363D3EFC1B9"
+               BuildableName = "MinuteMeterUITests.xctest"
+               BlueprintName = "MinuteMeterUITests"
+               ReferencedContainer = "container:MinuteMeter.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <CommandLineArguments>
       </CommandLineArguments>

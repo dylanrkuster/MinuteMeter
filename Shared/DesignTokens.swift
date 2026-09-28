@@ -121,6 +121,7 @@ struct TextStyle {
     static let body          = TextStyle(font: Typeface.barlow(17, .regular), tracking: 0, uppercase: false)
     static let row           = TextStyle(font: Typeface.barlow(16, .medium), tracking: 0, uppercase: false)
     static let detent        = TextStyle(font: Typeface.barlow(18).monospacedDigit(), tracking: 0, uppercase: false)    // knob labels
+    static let date          = TextStyle(font: Typeface.condensed(13), tracking: 1.8, uppercase: true)                   // "SAT 26 SEP"
     static let label         = TextStyle(font: Typeface.condensed(12), tracking: 1.7, uppercase: true)                   // "LEFT TODAY"
     static let smallLabel    = TextStyle(font: Typeface.condensed(11), tracking: 1.5, uppercase: true)
     static let title         = TextStyle(font: Typeface.condensed(14, .bold), tracking: 2.5, uppercase: true)            // "USAGE", "SETTINGS"
@@ -133,6 +134,13 @@ extension View {
         self.font(style.font)
             .tracking(style.tracking)
             .textCase(style.uppercase ? .uppercase : nil)
+    }
+
+    /// Matches a CSS `line-height` from the mockups, such as 0.92 on the hero
+    /// numbers. Barlow's natural line height is 1.2 times the font size, so
+    /// this trims or adds the difference evenly above and below.
+    func lineHeight(_ multiple: CGFloat, fontSize: CGFloat) -> some View {
+        padding(.vertical, (multiple - 1.2) / 2 * fontSize)
     }
 }
 

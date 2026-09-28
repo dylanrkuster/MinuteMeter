@@ -62,11 +62,13 @@ Until today's entry exists, the shield reads today as 0 minutes used, at the pen
 JSON files in the App Group. There are no accounts and nothing is stored on a server, so deleting the app deletes its history.
 
 - **State:** the limit, the pending limit, the picked apps (`FamilyActivitySelection`), pending removals, and the current unlock.
-- **History:** one entry per day, holding minutes used, that day's limit, and the number of blocked apps and categories.
+- **History:** `history.json`, a dictionary keyed by calendar day as text (`"2026-09-28"`), so there's one entry per day and today's is a direct lookup. Each entry holds minutes used, that day's limit, and the number of blocked apps and categories. Days are text rather than timestamps because a day means "this calendar day where you are", and a timestamp needs a time zone to become a day (see #3).
 
 Time left today is today's limit minus today's minutes used.
 
 The app and the Monitor are separate processes that write the same files, and the shield reads them at any time. Every write replaces the whole file atomically and goes through `NSFileCoordinator`, so a write is never lost or read half-finished.
+
+A missing file just means no data yet. Any other read failure is an error: screens show an unknown value instead of the full limit, and nothing saves over a file it couldn't read.
 
 ## Accepted bypasses
 
