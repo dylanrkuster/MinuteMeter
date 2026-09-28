@@ -20,6 +20,7 @@
 		1C02D7CBCF197E801E7E6D12 /* DayEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFF8CC8F1DBE65C79F0C72D /* DayEntry.swift */; };
 		2027BD060C4FD5A041017532 /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D38D0FA24D76DC97A711302 /* AppGroup.swift */; };
 		2030955D5F92CF63319CAB0A /* Barlow-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 439711EE0DA5B6B2B579A471 /* Barlow-SemiBold.ttf */; };
+		2A351892F984DECE416CC464 /* TodayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2255C3D742236242E2D8545 /* TodayUITests.swift */; };
 		2CA6A757A98A1B0609BB304B /* DayEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFF8CC8F1DBE65C79F0C72D /* DayEntry.swift */; };
 		3C00E001333EE45D0F27D2B5 /* LiveActivityBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0189FC31A4C803502274CA /* LiveActivityBundle.swift */; };
 		3E82555EFF6E24D5ED03F998 /* TimeMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090A9D1A63EFA81C08010A17 /* TimeMath.swift */; };
@@ -92,6 +93,13 @@
 			remoteGlobalIDString = BAE6FCB05405D52DEBAE9004;
 			remoteInfo = ShieldAction;
 		};
+		6F5484EB1970DB8CD6DDA936 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D0F00E9B98C8BF3BA8AE8771 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 97952F33830980056BBD6C96;
+			remoteInfo = MinuteMeter;
+		};
 		7438DBE27FEC5A6911D74A34 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D0F00E9B98C8BF3BA8AE8771 /* Project object */;
@@ -129,6 +137,7 @@
 		090A9D1A63EFA81C08010A17 /* TimeMath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeMath.swift; sourceTree = "<group>"; };
 		0C68322C0BE0DC1621A9F258 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		0D186F5848E58D0FE11DE60B /* HistoryStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryStoreTests.swift; sourceTree = "<group>"; };
+		1C70E124930E3835B9E85DC8 /* MinuteMeterUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = MinuteMeterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		262903BB42DBB2D6F964B177 /* MinuteMeterTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = MinuteMeterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		29CBD32B875F5F6FD43C7E76 /* BarlowSemiCondensed-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BarlowSemiCondensed-Bold.ttf"; sourceTree = "<group>"; };
 		2C991375A848D9C09DCE0252 /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
@@ -158,6 +167,7 @@
 		B28147E8DE3BB40D5E954B75 /* TodayModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayModelTests.swift; sourceTree = "<group>"; };
 		B7BC9A7D234DCD1CF103B6DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		BB450C071F4C088B5351C9ED /* TimeMathTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeMathTests.swift; sourceTree = "<group>"; };
+		C2255C3D742236242E2D8545 /* TodayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayUITests.swift; sourceTree = "<group>"; };
 		CFC955D02DD6858FBD10B537 /* BarlowSemiCondensed-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BarlowSemiCondensed-Medium.ttf"; sourceTree = "<group>"; };
 		D5D9A9A6556994D8F798DDF8 /* MinuteMeterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinuteMeterApp.swift; sourceTree = "<group>"; };
 		DF7D176890C0AF384967CF11 /* Barlow-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Barlow-Bold.ttf"; sourceTree = "<group>"; };
@@ -200,6 +210,7 @@
 				0125891D43209BE12ED5EA2A /* LiveActivity */,
 				6BE868E7ED9C817D5796AFF1 /* MinuteMeter */,
 				D88198B570FE38B5CA1EC3FF /* MinuteMeterTests */,
+				B62CCA0CF498C8AA430F2540 /* MinuteMeterUITests */,
 				8EE5089B28F924C41B9C51FA /* Monitor */,
 				FCA8F220F19256AA3B37708A /* Shared */,
 				D1841065A1B6B118EE75984B /* ShieldAction */,
@@ -244,6 +255,7 @@
 				A95C9E3D4F41BDF36F708DD3 /* LiveActivity.appex */,
 				E7BD0E955CD6ECC53769F220 /* MinuteMeter.app */,
 				262903BB42DBB2D6F964B177 /* MinuteMeterTests.xctest */,
+				1C70E124930E3835B9E85DC8 /* MinuteMeterUITests.xctest */,
 				79833ED726EE2E5AD57467CE /* Monitor.appex */,
 				4C94881B9E8A1A7502325A43 /* ShieldAction.appex */,
 				990F16CC0E15D476C3D0BD32 /* ShieldConfiguration.appex */,
@@ -269,6 +281,14 @@
 				6236C0C5117737FC3ABF3053 /* ShieldConfigurationExtension.swift */,
 			);
 			path = ShieldConfiguration;
+			sourceTree = "<group>";
+		};
+		B62CCA0CF498C8AA430F2540 /* MinuteMeterUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C2255C3D742236242E2D8545 /* TodayUITests.swift */,
+			);
+			path = MinuteMeterUITests;
 			sourceTree = "<group>";
 		};
 		D1841065A1B6B118EE75984B /* ShieldAction */ = {
@@ -308,6 +328,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		39F7A742E72E6363D3EFC1B9 /* MinuteMeterUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9FB8C2A032FC6597CA20331 /* Build configuration list for PBXNativeTarget "MinuteMeterUITests" */;
+			buildPhases = (
+				A3CF51698736CE1E0C04B8A2 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				658F8D3A97D6E602670136F6 /* PBXTargetDependency */,
+			);
+			name = MinuteMeterUITests;
+			packageProductDependencies = (
+			);
+			productName = MinuteMeterUITests;
+			productReference = 1C70E124930E3835B9E85DC8 /* MinuteMeterUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		6A8E138AD7F339BF612E3065 /* Monitor */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2FFF0BC98AA4AECE027188B6 /* Build configuration list for PBXNativeTarget "Monitor" */;
@@ -427,6 +465,11 @@
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
+					39F7A742E72E6363D3EFC1B9 = {
+						DevelopmentTeam = 2GDFC79M88;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 97952F33830980056BBD6C96;
+					};
 					6A8E138AD7F339BF612E3065 = {
 						DevelopmentTeam = 2GDFC79M88;
 						ProvisioningStyle = Automatic;
@@ -470,6 +513,7 @@
 				D1F43B4EE82F75EC17D90A36 /* LiveActivity */,
 				97952F33830980056BBD6C96 /* MinuteMeter */,
 				E991B84E8107FDB943CCF7C0 /* MinuteMeterTests */,
+				39F7A742E72E6363D3EFC1B9 /* MinuteMeterUITests */,
 				6A8E138AD7F339BF612E3065 /* Monitor */,
 				BAE6FCB05405D52DEBAE9004 /* ShieldAction */,
 				9FE83835BA7F11A77C98C3BC /* ShieldConfiguration */,
@@ -566,6 +610,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A3CF51698736CE1E0C04B8A2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A351892F984DECE416CC464 /* TodayUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B81521CE07B29AEBDF66C992 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -606,6 +658,11 @@
 			isa = PBXTargetDependency;
 			target = 97952F33830980056BBD6C96 /* MinuteMeter */;
 			targetProxy = 5003B1082BD0D134B577FB86 /* PBXContainerItemProxy */;
+		};
+		658F8D3A97D6E602670136F6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 97952F33830980056BBD6C96 /* MinuteMeter */;
+			targetProxy = 6F5484EB1970DB8CD6DDA936 /* PBXContainerItemProxy */;
 		};
 		860906C7811AA14B9E8F08EE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -717,6 +774,23 @@
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MinuteMeter.app/MinuteMeter";
+			};
+			name = Release;
+		};
+		1FCD802F75BF5F29C445CB9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dylankuster.MinuteMeterUITests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MinuteMeter;
 			};
 			name = Release;
 		};
@@ -869,6 +943,23 @@
 			};
 			name = Release;
 		};
+		846471381445951D1599C9AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dylankuster.MinuteMeterUITests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MinuteMeter;
+			};
+			name = Debug;
+		};
 		C42E565A8C0C77536D9CFE5B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -994,6 +1085,15 @@
 			buildConfigurations = (
 				5B4AB97A4FB0EC99A06C2E84 /* Debug */,
 				4B53BED807CDAD8F83947DA5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		C9FB8C2A032FC6597CA20331 /* Build configuration list for PBXNativeTarget "MinuteMeterUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				846471381445951D1599C9AD /* Debug */,
+				1FCD802F75BF5F29C445CB9A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
