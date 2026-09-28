@@ -6,7 +6,7 @@ A minimal iOS screen time app. This is a personal project: quality over speed, a
 
 1. Every change starts as a GitHub issue with a goal, scope, acceptance criteria, and what's out of scope.
 2. Branch off `main` as `<issue number>-<short-slug>`, for example `12-unlock-dial`.
-3. Commit at meaningful checkpoints as the work progresses. Avoid tiny commits; one commit per round of review fixes is fine.
+3. Commit in small, working steps as the work progresses.
 4. Push the branch and open a PR whose description starts with `Closes #<issue>`.
 5. A Claude code review runs on the PR and checks it against the issue. Unit and UI tests will run on PRs too.
 6. The owner merges. Never push to `main` directly.
