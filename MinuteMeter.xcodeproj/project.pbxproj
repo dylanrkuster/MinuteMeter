@@ -8,45 +8,33 @@
 
 /* Begin PBXBuildFile section */
 		019AB4C973449DC6AEE631CC /* DesignTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF109627DAD8B5DF59826C56 /* DesignTokens.swift */; };
-		03CB2E6C97DF203DBFF0A8E1 /* Barlow-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6F7F7B92B7AD117E8789E42E /* Barlow-Medium.ttf */; };
 		04E868BCD8CCA315EB9C1E52 /* DesignTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF109627DAD8B5DF59826C56 /* DesignTokens.swift */; };
 		102B3D704499FED7FD1B002D /* UnlockActivityAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFFF9E182870F3B24D8AE0A /* UnlockActivityAttributes.swift */; };
-		1835CB81F873A596B35A806D /* Barlow-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB4A47C9494BD63439517ADC /* Barlow-Regular.ttf */; };
 		2027BD060C4FD5A041017532 /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D38D0FA24D76DC97A711302 /* AppGroup.swift */; };
-		2030955D5F92CF63319CAB0A /* Barlow-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 439711EE0DA5B6B2B579A471 /* Barlow-SemiBold.ttf */; };
 		3C00E001333EE45D0F27D2B5 /* LiveActivityBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0189FC31A4C803502274CA /* LiveActivityBundle.swift */; };
-		3F16CC8FE45355C25E31E2EF /* Barlow-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB4A47C9494BD63439517ADC /* Barlow-Regular.ttf */; };
-		401AD1304CF4F98434657BD4 /* Barlow-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DF7D176890C0AF384967CF11 /* Barlow-Bold.ttf */; };
 		4BC43E498994B98CA4FCDC10 /* MinuteMeterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D9A9A6556994D8F798DDF8 /* MinuteMeterApp.swift */; };
 		4DBD67B84F53FA5BE49321B4 /* UnlockActivityAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFFF9E182870F3B24D8AE0A /* UnlockActivityAttributes.swift */; };
 		54D7D63708CC5D83104932A8 /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D38D0FA24D76DC97A711302 /* AppGroup.swift */; };
-		581363A1860E05E4B44790FC /* Barlow-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6F7F7B92B7AD117E8789E42E /* Barlow-Medium.ttf */; };
 		5B8D61F19DD3C97712B92E0C /* ShieldAction.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 4C94881B9E8A1A7502325A43 /* ShieldAction.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		65D9B047AD1EA5E712E6D14A /* UnlockLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE3C50C79757818234B90EF /* UnlockLiveActivity.swift */; };
 		672E9F36EA1CE6549C708C19 /* DeviceActivityMonitorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9D293CE7C70FC4E62319EC /* DeviceActivityMonitorExtension.swift */; };
 		70E5F19E11DB7011F525EA4B /* UnlockActivityAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFFF9E182870F3B24D8AE0A /* UnlockActivityAttributes.swift */; };
-		745E794B6E9EE986B448E6E5 /* BarlowSemiCondensed-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFB993310CB710E4B22D85F5 /* BarlowSemiCondensed-SemiBold.ttf */; };
-		882496C7163B2555A3038940 /* Barlow-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 439711EE0DA5B6B2B579A471 /* Barlow-SemiBold.ttf */; };
 		9966A6F281D7A83A83022C14 /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D38D0FA24D76DC97A711302 /* AppGroup.swift */; };
+		99AE4BAF3890F5EB677811AC /* Chivo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 005E07FBCA96E7D00EE8337A /* Chivo.ttf */; };
 		99ED7AB5959FC05ECE3A9B41 /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D38D0FA24D76DC97A711302 /* AppGroup.swift */; };
 		9FD05856C444EB987904636D /* ShieldActionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7082899C25FE130749A7A0E3 /* ShieldActionExtension.swift */; };
 		A9B1F8606C9E5E0E49C1B62F /* DesignTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF109627DAD8B5DF59826C56 /* DesignTokens.swift */; };
-		AB334CDE37C2FB025290ADC2 /* BarlowSemiCondensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 29CBD32B875F5F6FD43C7E76 /* BarlowSemiCondensed-Bold.ttf */; };
 		AC59ADB7FFB3E8D604185800 /* ShieldConfiguration.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 990F16CC0E15D476C3D0BD32 /* ShieldConfiguration.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		C725773A2B004C1C68999FF6 /* ShieldConfigurationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6236C0C5117737FC3ABF3053 /* ShieldConfigurationExtension.swift */; };
-		CA0B9CF9E43C4C874E11612B /* BarlowSemiCondensed-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CFC955D02DD6858FBD10B537 /* BarlowSemiCondensed-Medium.ttf */; };
 		CAB9856F1BF37DD399F2E652 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246A19A285F493FBEB897DF7 /* HomeView.swift */; };
 		CC2A18E0AE9B7641AE51C125 /* Monitor.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 79833ED726EE2E5AD57467CE /* Monitor.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D4CA502779D730A0EEF23758 /* UnlockActivityAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFFF9E182870F3B24D8AE0A /* UnlockActivityAttributes.swift */; };
-		D508B9B66F21FF67232B64B8 /* Barlow-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DF7D176890C0AF384967CF11 /* Barlow-Bold.ttf */; };
-		D7BD3879F973F9B8325D6746 /* BarlowSemiCondensed-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CFC955D02DD6858FBD10B537 /* BarlowSemiCondensed-Medium.ttf */; };
-		DFE839025406D6BC1E1F7428 /* BarlowSemiCondensed-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFB993310CB710E4B22D85F5 /* BarlowSemiCondensed-SemiBold.ttf */; };
+		F0E19071625D4284EB0DFC62 /* Chivo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 005E07FBCA96E7D00EE8337A /* Chivo.ttf */; };
 		F32D8598129D650B437BDE91 /* DesignTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF109627DAD8B5DF59826C56 /* DesignTokens.swift */; };
 		F7940BBF49BFFF70C5909CF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A50EADC48B22804A4B39C40 /* Assets.xcassets */; };
 		F8BB788EB09D49E53CD7AC3B /* LiveActivity.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = A95C9E3D4F41BDF36F708DD3 /* LiveActivity.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		F9FFF8B6F53C521F4FD408FD /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D38D0FA24D76DC97A711302 /* AppGroup.swift */; };
 		FB5E2BFF5826DA161B6B4C75 /* UnlockActivityAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFFF9E182870F3B24D8AE0A /* UnlockActivityAttributes.swift */; };
-		FB7F3B7B5435E56F4DB34963 /* BarlowSemiCondensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 29CBD32B875F5F6FD43C7E76 /* BarlowSemiCondensed-Bold.ttf */; };
 		FECBE8F5F937DEC791838013 /* DesignTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF109627DAD8B5DF59826C56 /* DesignTokens.swift */; };
 /* End PBXBuildFile section */
 
@@ -113,23 +101,21 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		005E07FBCA96E7D00EE8337A /* Chivo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Chivo.ttf; sourceTree = "<group>"; };
 		0C68322C0BE0DC1621A9F258 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		1C70E124930E3835B9E85DC8 /* MinuteMeterUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = MinuteMeterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		246A19A285F493FBEB897DF7 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		262903BB42DBB2D6F964B177 /* MinuteMeterTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = MinuteMeterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		29CBD32B875F5F6FD43C7E76 /* BarlowSemiCondensed-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BarlowSemiCondensed-Bold.ttf"; sourceTree = "<group>"; };
 		31FAB9782D05F83BE75AB4A4 /* .gitkeep */ = {isa = PBXFileReference; path = .gitkeep; sourceTree = "<group>"; };
 		341F7DF6B8BEBC0FB50DF5BC /* MinuteMeter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MinuteMeter.entitlements; sourceTree = "<group>"; };
 		3D0189FC31A4C803502274CA /* LiveActivityBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveActivityBundle.swift; sourceTree = "<group>"; };
 		402F77169E70E1F79DAA4C7C /* ShieldConfiguration.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShieldConfiguration.entitlements; sourceTree = "<group>"; };
-		439711EE0DA5B6B2B579A471 /* Barlow-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Barlow-SemiBold.ttf"; sourceTree = "<group>"; };
 		49E003B8648BAAB4F3EDD0C8 /* .gitkeep */ = {isa = PBXFileReference; path = .gitkeep; sourceTree = "<group>"; };
 		4BFFF9E182870F3B24D8AE0A /* UnlockActivityAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockActivityAttributes.swift; sourceTree = "<group>"; };
 		4C94881B9E8A1A7502325A43 /* ShieldAction.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = ShieldAction.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CE3C50C79757818234B90EF /* UnlockLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockLiveActivity.swift; sourceTree = "<group>"; };
 		5EDE70A5916C9AE75A483BDE /* ShieldAction.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShieldAction.entitlements; sourceTree = "<group>"; };
 		6236C0C5117737FC3ABF3053 /* ShieldConfigurationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShieldConfigurationExtension.swift; sourceTree = "<group>"; };
-		6F7F7B92B7AD117E8789E42E /* Barlow-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Barlow-Medium.ttf"; sourceTree = "<group>"; };
 		7082899C25FE130749A7A0E3 /* ShieldActionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShieldActionExtension.swift; sourceTree = "<group>"; };
 		79833ED726EE2E5AD57467CE /* Monitor.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = Monitor.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A50EADC48B22804A4B39C40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -138,13 +124,9 @@
 		8D6BC933A63B231C836E86BA /* Monitor.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Monitor.entitlements; sourceTree = "<group>"; };
 		990F16CC0E15D476C3D0BD32 /* ShieldConfiguration.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = ShieldConfiguration.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		A95C9E3D4F41BDF36F708DD3 /* LiveActivity.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = LiveActivity.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		AFB993310CB710E4B22D85F5 /* BarlowSemiCondensed-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BarlowSemiCondensed-SemiBold.ttf"; sourceTree = "<group>"; };
 		B7BC9A7D234DCD1CF103B6DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		CFC955D02DD6858FBD10B537 /* BarlowSemiCondensed-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BarlowSemiCondensed-Medium.ttf"; sourceTree = "<group>"; };
 		D5D9A9A6556994D8F798DDF8 /* MinuteMeterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinuteMeterApp.swift; sourceTree = "<group>"; };
-		DF7D176890C0AF384967CF11 /* Barlow-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Barlow-Bold.ttf"; sourceTree = "<group>"; };
 		E7BD0E955CD6ECC53769F220 /* MinuteMeter.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = MinuteMeter.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		EB4A47C9494BD63439517ADC /* Barlow-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Barlow-Regular.ttf"; sourceTree = "<group>"; };
 		EF109627DAD8B5DF59826C56 /* DesignTokens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignTokens.swift; sourceTree = "<group>"; };
 		EF9C67D122D133F32AFAE34A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		F66E4C9196A33FDDBBA92913 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -165,13 +147,7 @@
 		0AB2F717BE5A6BBBD1987FEC /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				DF7D176890C0AF384967CF11 /* Barlow-Bold.ttf */,
-				6F7F7B92B7AD117E8789E42E /* Barlow-Medium.ttf */,
-				EB4A47C9494BD63439517ADC /* Barlow-Regular.ttf */,
-				439711EE0DA5B6B2B579A471 /* Barlow-SemiBold.ttf */,
-				29CBD32B875F5F6FD43C7E76 /* BarlowSemiCondensed-Bold.ttf */,
-				CFC955D02DD6858FBD10B537 /* BarlowSemiCondensed-Medium.ttf */,
-				AFB993310CB710E4B22D85F5 /* BarlowSemiCondensed-SemiBold.ttf */,
+				005E07FBCA96E7D00EE8337A /* Chivo.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -484,13 +460,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F7940BBF49BFFF70C5909CF4 /* Assets.xcassets in Resources */,
-				D508B9B66F21FF67232B64B8 /* Barlow-Bold.ttf in Resources */,
-				03CB2E6C97DF203DBFF0A8E1 /* Barlow-Medium.ttf in Resources */,
-				3F16CC8FE45355C25E31E2EF /* Barlow-Regular.ttf in Resources */,
-				2030955D5F92CF63319CAB0A /* Barlow-SemiBold.ttf in Resources */,
-				AB334CDE37C2FB025290ADC2 /* BarlowSemiCondensed-Bold.ttf in Resources */,
-				CA0B9CF9E43C4C874E11612B /* BarlowSemiCondensed-Medium.ttf in Resources */,
-				745E794B6E9EE986B448E6E5 /* BarlowSemiCondensed-SemiBold.ttf in Resources */,
+				99AE4BAF3890F5EB677811AC /* Chivo.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,13 +468,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				401AD1304CF4F98434657BD4 /* Barlow-Bold.ttf in Resources */,
-				581363A1860E05E4B44790FC /* Barlow-Medium.ttf in Resources */,
-				1835CB81F873A596B35A806D /* Barlow-Regular.ttf in Resources */,
-				882496C7163B2555A3038940 /* Barlow-SemiBold.ttf in Resources */,
-				FB7F3B7B5435E56F4DB34963 /* BarlowSemiCondensed-Bold.ttf in Resources */,
-				D7BD3879F973F9B8325D6746 /* BarlowSemiCondensed-Medium.ttf in Resources */,
-				DFE839025406D6BC1E1F7428 /* BarlowSemiCondensed-SemiBold.ttf in Resources */,
+				F0E19071625D4284EB0DFC62 /* Chivo.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

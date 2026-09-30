@@ -14,4 +14,4 @@ Screen Time features only work on a real device.
 
 ## License
 
-The code is source-available under the [PolyForm Noncommercial License 1.0.0](LICENSE.md): you can read, run, and modify it for noncommercial purposes. The Barlow fonts in `Shared/Fonts` are under the [SIL Open Font License](Shared/Fonts/OFL.txt).
+The code is source-available under the [PolyForm Noncommercial License 1.0.0](LICENSE.md): you can read, run, and modify it for noncommercial purposes. The Chivo font in `Shared/Fonts` are under the [SIL Open Font License](Shared/Fonts/OFL.txt).

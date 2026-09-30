@@ -41,13 +41,7 @@ targets:
         UILaunchScreen:
           UIColorName: LaunchBackground
         UIAppFonts: &fonts
-          - Barlow-Regular.ttf
-          - Barlow-Medium.ttf
-          - Barlow-SemiBold.ttf
-          - Barlow-Bold.ttf
-          - BarlowSemiCondensed-Medium.ttf
-          - BarlowSemiCondensed-SemiBold.ttf
-          - BarlowSemiCondensed-Bold.ttf
+          - Chivo.ttf
     entitlements:
       path: MinuteMeter/MinuteMeter.entitlements
       properties:
