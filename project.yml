@@ -36,7 +36,7 @@ targets:
         CFBundleDisplayName: Minute Meter
         ITSAppUsesNonExemptEncryption: false
         NSSupportsLiveActivities: true
-        UIUserInterfaceStyle: Dark
+        UIUserInterfaceStyle: Light
         UISupportedInterfaceOrientations: [UIInterfaceOrientationPortrait]
         UILaunchScreen:
           UIColorName: LaunchBackground
