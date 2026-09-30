@@ -15,6 +15,7 @@ A minimal iOS screen time app. This is a personal project: quality over speed, a
 
 The owner follows Mitchell Hashimoto's "whiteboard defense": they must be able to explain and defend every shipped system at a high level without knowing each line. Claude writes the code; the owner owns the decisions.
 
+- Never do anything the owner didn't ask for. Every action must come from an instruction they gave. If something else seems needed, suggest it instead of doing it.
 - Before building anything non-trivial, propose the approach and wait for agreement.
 - In every PR description, and when reporting finished work, explain what was built and why. When they apply, also cover:
   - The data structures and design patterns used, and why they beat the alternatives.
