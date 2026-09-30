@@ -1,10 +1,10 @@
 //  DesignTokens.swift
-//  Design tokens for the B3 Night design (dark UI, Brass accent).
-//  Source of truth: design/source/*.html. Values are copied from those files.
+//  Design tokens for the wind-up timer design (light cream plastic, red accent).
+//  Source of truth: the design's SVG and HTML files. Values are copied from them.
 //
-//  Fonts: add Fonts/*.ttf to the app target (and any extension that renders text,
-//  such as the Live Activity widget) and list them under UIAppFonts in Info.plist.
-//  Barlow is licensed under the SIL Open Font License (Fonts/OFL.txt).
+//  Font: Chivo, a variable font that covers every weight in one file (SIL Open
+//  Font License). Add it to the app target and the Live Activity target and list
+//  it under UIAppFonts in Info.plist.
 
 import SwiftUI
 
@@ -24,109 +24,153 @@ extension Color {
 }
 
 enum Palette {
-    // Surfaces
-    static let background     = Color(hex: 0x161615) // screen background
-    static let panel          = Color(hex: 0x1C1C1B) // raised list panels
-    static let recess         = Color(hex: 0x0E0E0D) // sunken panels, segmented tracks, readouts
-    static let hairline       = Color(hex: 0x262624) // row dividers
-    static let track          = Color(hex: 0x2C2C2A) // unfilled bars, empty pie wedge
-    static let tick           = Color(hex: 0x55534E) // minor ticks on tapes and the knob arc
+    // Text and marks
+    static let ink           = Color(hex: 0x1D1A16) // text, dial ticks and numbers, icons
+    static let secondary     = Color(hex: 0x7A7163) // labels, status line
+    static let unlockedText  = Color(hex: 0xB8361F) // "UNLOCKED" status
+    static let onRed         = Color(hex: 0xFFFDF8) // text on the red button
 
-    // Raised controls (round header buttons, selected segment)
-    static let raisedTop      = Color(hex: 0x383835)
-    static let raisedBottom   = Color(hex: 0x2A2A28)
-    static let knobButtonTop  = Color(hex: 0x353533)
-    static let knobButtonBase = Color(hex: 0x242422)
+    // Red accent
+    static let red           = Color(hex: 0xD2402A) // pointer, live status dot
 
-    // Knob
-    static let knurlDark      = Color(hex: 0x232321)
-    static let knurlLight     = Color(hex: 0x3A3A37)
-    static let faceHighlight  = Color(hex: 0x3C3C39)
-    static let faceMid        = Color(hex: 0x282826)
-    static let faceShadow     = Color(hex: 0x1C1C1A)
+    // Status dot when locked
+    static let idleDot       = Color(hex: 0xB3A994)
 
-    // Text
-    static let textPrimary    = Color(hex: 0xEDEBE4)
-    static let textSecondary  = Color(hex: 0x9A978F)
-    static let textDisabled   = Color(hex: 0x6E6B64)
-    static let onAccent       = Color(hex: 0x161615) // text on Brass fills
-
-    // "Lock now" light button
-    static let lightButtonTop    = Color(hex: 0xFFFFFF)
-    static let lightButtonMid    = Color(hex: 0xEDEBE4)
-    static let lightButtonBottom = Color(hex: 0xD2CFC7)
-    static let lightButtonLip    = Color(hex: 0x6E6B64)
-
-    // Used-time marks in Trends (pie wedges)
-    static let usedMark       = Color(hex: 0x8A8780)
+    // Warm brown used for every drop shadow
+    static let shadow        = Color(hex: 0x3B2F1E)
 }
 
-/// Brass accent. `base` is the brand color; the others are derived from it
-/// (text = 12% toward white, highlight = 35% toward white, deep = 12% toward black,
-/// lip = 42% toward black). Keep the derivation if you ever swap the accent.
-enum Accent {
-    static let base      = Color(hex: 0xD8A95B)
-    static let text      = Color(hex: 0xDDB36F) // accent-colored text on dark
-    static let highlight = Color(hex: 0xE6C794) // top of button gradients
-    static let deep      = Color(hex: 0xBE9550) // bottom of button gradients
-    static let lip       = Color(hex: 0x7D6235) // 4 pt "key" edge under primary buttons
-    static let glow      = Color(hex: 0xD8A95B, opacity: 0.5)
+/// Gradients, as color stops. Views build the SwiftUI gradient from these.
+enum Gradients {
+    /// Screen background: an ellipse centered at 30% across and 22% down,
+    /// with radii of 120% of the width and 80% of the height.
+    static let background: [Gradient.Stop] = [
+        .init(color: Color(hex: 0xF2ECE1), location: 0),
+        .init(color: Color(hex: 0xE6DECF), location: 0.55),
+        .init(color: Color(hex: 0xD9CFBE), location: 1),
+    ]
+    static let backgroundCenter = UnitPoint(x: 0.30, y: 0.22)
+    static let backgroundRadii = CGSize(width: 1.2, height: 0.8) // fractions of width and height
+
+    /// Round plastic buttons (Settings): radial, lit from the top left.
+    static let plastic: [Gradient.Stop] = [
+        .init(color: Color(hex: 0xFFFEFB), location: 0),
+        .init(color: Color(hex: 0xF1EBDF), location: 0.6),
+        .init(color: Color(hex: 0xE2D9C9), location: 1),
+    ]
+    static let plasticCenter = UnitPoint(x: 0.42, y: 0.30)
+
+    /// Unlock button, top to bottom.
+    static let redButton: [Gradient.Stop] = [
+        .init(color: Color(hex: 0xE4553C), location: 0),
+        .init(color: Color(hex: 0xC9391F), location: 1),
+    ]
+
+    /// Lock now button, top to bottom.
+    static let creamButton: [Gradient.Stop] = [
+        .init(color: Color(hex: 0xFBF8F2), location: 0),
+        .init(color: Color(hex: 0xE9E2D5), location: 1),
+    ]
+
+    /// Live status dot: radial, lit from the top left.
+    static let redDot: [Gradient.Stop] = [
+        .init(color: Color(hex: 0xFF8A6E), location: 0),
+        .init(color: Color(hex: 0xD2402A), location: 0.6),
+    ]
+}
+
+/// The wind-up timer's colors, from the outer housing inward.
+enum DialColors {
+    // Housing: the round base the dial sits in
+    static let housingTop: [Gradient.Stop] = [          // radial, center (0.36, 0.28)
+        .init(color: Color(hex: 0xFFFEFB), location: 0),
+        .init(color: Color(hex: 0xF6F1E8), location: 0.45),
+        .init(color: Color(hex: 0xE9E1D3), location: 0.85),
+        .init(color: Color(hex: 0xDAD0BE), location: 1),
+    ]
+    static let housingSide: [Gradient.Stop] = [         // left to right
+        .init(color: Color(hex: 0xCFC6B5), location: 0),
+        .init(color: Color(hex: 0xE6DECF), location: 0.28),
+        .init(color: Color(hex: 0xC8BDAA), location: 0.62),
+        .init(color: Color(hex: 0xA09481), location: 1),
+    ]
+    static let housingSideShade = Palette.shadow        // 0 → 28% opacity, from 55% down to the bottom
+    static let bevelLight        = Color.white           // 95% opacity at the top left
+    static let bevelDark         = Color(hex: 0x8F826C)  // 55% opacity at the bottom right
+    static let ringLight         = Color.white           // 70% opacity
+    static let ringDark          = Color(hex: 0xC9BEAB)  // 80% opacity
+
+    // Turning dial: its side, rim, and ridged grip ring
+    static let dialRim           = Color(hex: 0x8E826F)
+    static let dialSide: [Gradient.Stop] = [            // left to right
+        .init(color: Color(hex: 0xD9D0C0), location: 0),
+        .init(color: Color(hex: 0xE8E1D4), location: 0.35),
+        .init(color: Color(hex: 0xA99D89), location: 1),
+    ]
+    static let sideTick          = Color(hex: 0x4A3D2A)  // 22–38% opacity, darker toward the bottom right
+    static let knurlBase         = Color(hex: 0xEEE7DA)
+    static let knurlDark         = Color(hex: 0x4E412D)  // 20–52% opacity, darker toward the bottom right
+    static let knurlLight        = Color.white           // 25–90% opacity, brighter toward the top left
+
+    // Face: the numbered disc
+    static let faceRim           = Color(hex: 0xB8AC97)
+    static let face: [Gradient.Stop] = [                // radial, center (0.40, 0.32)
+        .init(color: Color(hex: 0xFFFFFD), location: 0),
+        .init(color: Color(hex: 0xF8F3EA), location: 0.6),
+        .init(color: Color(hex: 0xEDE5D7), location: 1),
+    ]
+    static let faceEdgeShade     = Color(hex: 0x46371F)  // 0 → 16% opacity over the outer 14%
+
+    // Grip: the raised bar in the middle of the face
+    static let gripTop: [Gradient.Stop] = [
+        .init(color: .white, location: 0),
+        .init(color: Color(hex: 0xF4EEE4), location: 0.5),
+        .init(color: Color(hex: 0xDDD3C2), location: 1),
+    ]
+    static let gripSide: [Gradient.Stop] = [
+        .init(color: Color(hex: 0xD3C9B7), location: 0),
+        .init(color: Color(hex: 0xA89C87), location: 1),
+    ]
+    static let gripRimDark       = Color(hex: 0x9C907C)  // 60% opacity
+
+    // Pointer: the fixed red flag at the top, and its rivet
+    static let pointer: [Gradient.Stop] = [             // left to right
+        .init(color: Color(hex: 0xEE6A4F), location: 0),
+        .init(color: Color(hex: 0xD2402A), location: 0.45),
+        .init(color: Color(hex: 0xA42C1B), location: 1),
+    ]
+    static let pointerShadow     = Color(hex: 0x2A1A10)  // 45% opacity
+    static let rivet: [Gradient.Stop] = [               // radial, center (0.35, 0.30)
+        .init(color: .white, location: 0),
+        .init(color: Color(hex: 0xC9CCCF), location: 0.5),
+        .init(color: Color(hex: 0x7D8286), location: 1),
+    ]
 }
 
 // MARK: - Typography
 //
-// Two families: Barlow (numbers, headlines, body) and Barlow Semi Condensed
-// (uppercase labels and button text). Always use monospaced digits for times.
+// Chivo SemiBold for all text, Chivo Medium for the dial numbers. The font file
+// has no separate files per weight, so styles use the family name plus a weight.
+// Always use monospaced digits for times.
 
 enum Typeface {
-    static func barlow(_ size: CGFloat, _ weight: Weight = .semibold) -> Font {
-        .custom(weight.barlow, size: size)
-    }
-    static func condensed(_ size: CGFloat, _ weight: Weight = .semibold) -> Font {
-        .custom(weight.condensed, size: size)
-    }
-
-    enum Weight {
-        case regular, medium, semibold, bold
-        var barlow: String {
-            switch self {
-            case .regular: "Barlow-Regular"
-            case .medium: "Barlow-Medium"
-            case .semibold: "Barlow-SemiBold"
-            case .bold: "Barlow-Bold"
-            }
-        }
-        var condensed: String {
-            switch self {
-            case .regular, .medium: "BarlowSemiCondensed-Medium"
-            case .semibold: "BarlowSemiCondensed-SemiBold"
-            case .bold: "BarlowSemiCondensed-Bold"
-            }
-        }
+    static func chivo(_ size: CGFloat, _ weight: Font.Weight = .semibold) -> Font {
+        .custom("Chivo", size: size).weight(weight)
     }
 }
 
-/// Named text styles used in the mockups. `tracking` is in points.
+/// Named text styles from the design. `tracking` is in points.
 struct TextStyle {
     let font: Font
     let tracking: CGFloat
     let uppercase: Bool
 
-    static let heroTime      = TextStyle(font: Typeface.barlow(116).monospacedDigit(), tracking: -2.3, uppercase: false) // Today "1:12"
-    static let heroCountdown = TextStyle(font: Typeface.barlow(104).monospacedDigit(), tracking: -2.1, uppercase: false) // Unlocked "11:42"
-    static let statNumber    = TextStyle(font: Typeface.barlow(72).monospacedDigit(), tracking: -0.7, uppercase: false)  // Trends "1:34"
-    static let limitValue    = TextStyle(font: Typeface.barlow(64).monospacedDigit(), tracking: 0, uppercase: false)     // Settings "2:00"
-    static let liveCountdown = TextStyle(font: Typeface.barlow(50).monospacedDigit(), tracking: 0, uppercase: false)
-    static let headline      = TextStyle(font: Typeface.barlow(32), tracking: -0.3, uppercase: false)                    // onboarding titles
-    static let body          = TextStyle(font: Typeface.barlow(17, .regular), tracking: 0, uppercase: false)
-    static let row           = TextStyle(font: Typeface.barlow(16, .medium), tracking: 0, uppercase: false)
-    static let detent        = TextStyle(font: Typeface.barlow(18).monospacedDigit(), tracking: 0, uppercase: false)    // knob labels
-    static let date          = TextStyle(font: Typeface.condensed(13), tracking: 1.8, uppercase: true)                   // "SAT 26 SEP"
-    static let label         = TextStyle(font: Typeface.condensed(12), tracking: 1.7, uppercase: true)                   // "LEFT TODAY"
-    static let smallLabel    = TextStyle(font: Typeface.condensed(11), tracking: 1.5, uppercase: true)
-    static let title         = TextStyle(font: Typeface.condensed(14, .bold), tracking: 2.5, uppercase: true)            // "USAGE", "SETTINGS"
-    static let buttonLarge   = TextStyle(font: Typeface.condensed(18, .bold), tracking: 2.5, uppercase: true)            // "GET STARTED"
-    static let knobCenter    = TextStyle(font: Typeface.condensed(17, .bold), tracking: 2.0, uppercase: true)            // "UNLOCK"
+    static let date       = TextStyle(font: Typeface.chivo(13), tracking: 1.82, uppercase: true)                      // "SAT 26 SEP"
+    static let status     = TextStyle(font: Typeface.chivo(11), tracking: 1.54, uppercase: true)                      // "6 APPS LOCKED"
+    static let label      = TextStyle(font: Typeface.chivo(12), tracking: 1.68, uppercase: true)                      // "LEFT TODAY"
+    static let heroTime   = TextStyle(font: Typeface.chivo(112).monospacedDigit(), tracking: -3.36, uppercase: false) // "1:12"
+    static let button     = TextStyle(font: Typeface.chivo(17), tracking: 0.34, uppercase: false)                     // "Unlock 15 min"
+    static let dialNumber = TextStyle(font: Typeface.chivo(27, .medium), tracking: 0, uppercase: false)               // "15"
 }
 
 extension View {
@@ -136,11 +180,11 @@ extension View {
             .textCase(style.uppercase ? .uppercase : nil)
     }
 
-    /// Matches a CSS `line-height` from the mockups, such as 0.92 on the hero
-    /// numbers. Barlow's natural line height is 1.2 times the font size, so
-    /// this trims or adds the difference evenly above and below.
+    /// Matches a CSS `line-height` from the design, such as 0.92 on the hero
+    /// number. Chivo's natural line height is 1.19 times the font size, so this
+    /// trims or adds the difference evenly above and below.
     func lineHeight(_ multiple: CGFloat, fontSize: CGFloat) -> some View {
-        padding(.vertical, (multiple - 1.2) / 2 * fontSize)
+        padding(.vertical, (multiple - 1.19) / 2 * fontSize)
     }
 }
 
@@ -150,48 +194,78 @@ enum Metrics {
     static let screenPadding: CGFloat = 24
     static let minTapTarget: CGFloat = 44
 
-    // Primary "key" button (GET STARTED, CONTINUE, LOCK MY APPS)
-    static let keyHeight: CGFloat = 64
-    static let keyRadius: CGFloat = 17
-    static let keyLip: CGFloat = 4          // solid edge drawn 4 pt below, in Accent.lip
+    // Header
+    static let headerLineGap: CGFloat = 3        // between the date and the status line
+    static let statusDotSize: CGFloat = 7
+    static let statusDotGap: CGFloat = 6         // between the dot and the status text
 
-    // Panels
-    static let panelRadius: CGFloat = 18
-    static let readoutRadius: CGFloat = 16
-    static let rowHeight: CGFloat = 48
+    // Vertical spacing down the screen
+    static let labelTopSpacing: CGFloat = 24     // header → "LEFT TODAY"
+    static let heroTopSpacing: CGFloat = 6       // label → hero number
+    static let heroLineHeight: CGFloat = 0.92
+    static let dialTopSpacing: CGFloat = 4       // hero number → dial
 
-    // Round header buttons (Trends, Settings, Back)
-    static let headerButton: CGFloat = 44
+    // Round plastic button (Settings)
+    static let roundButton: CGFloat = 44
+    static let roundButtonLip: CGFloat = 2       // solid edge below, in `roundButtonLipColor`
+    static let roundButtonLipColor = Color(hex: 0xCDC3B1)
 
-    // Limit / session tape
-    static let tapeHeight: CGFloat = 62
-    static let tapeBandHeight: CGFloat = 10
-    static let tapeBandRadius: CGFloat = 2
+    // Pill button (Unlock, Lock now)
+    static let pillWidth: CGFloat = 200
+    static let pillHeight: CGFloat = 54
+    static let pillRadius: CGFloat = 27
+    static let pillLip: CGFloat = 3              // solid edge below
+    static let redPillLip = Color(hex: 0x97291A)
+    static let creamPillLip = Color(hex: 0xC9BFAE)
 
-    // Rotary knob (Today, Unlocked, Out of time, onboarding limit).
-    // Container is 342 x 322 pt; knob center sits at (171, 185).
-    enum Knob {
-        static let knurlDiameter: CGFloat = 250     // ridged outer ring, 2.5° stripes
-        static let faceDiameter: CGFloat = 214
-        static let centerButtonDiameter: CGFloat = 116
-        static let pointerInnerRadius: CGFloat = 78
-        static let pointerOuterRadius: CGFloat = 102
-        static let pointerWidth: CGFloat = 5
-        static let tickArcRadius: CGFloat = 136     // tick arc spans -70° ... +70° (0° = 12 o'clock)
-        static let detentRadius: CGFloat = 152      // label centers
-        static let detentAngles: [Double] = [-60, -20, 20, 60]
-        static let unlockDetents = [5, 15, 30, 60]            // minutes
-        static let limitDetents = [30, 60, 120, 180]          // minutes (onboarding)
-        static let progressRingRadius: CGFloat = 136          // Unlocked screen ring
-        static let progressRingWidth: CGFloat = 7
+    /// The wind-up timer. Its frame is 360 x 360 pt with the center at (180, 180).
+    enum Dial {
+        static let size: CGFloat = 360
+        static let housingRadius: CGFloat = 170
+        static let housingDepth: CGFloat = 17      // how far the housing's side shows below its top
+        static let dialRadius: CGFloat = 151       // turning dial, including the ridged ring
+        static let dialDepth: CGFloat = 5          // how far the dial's side shows below it
+        static let knurlInnerRadius: CGFloat = 143.2
+        static let knurlOuterRadius: CGFloat = 150.6
+        static let knurlRidges = 96
+        static let faceRadius: CGFloat = 142.4
+
+        static let tickCount = 30                  // one per minute
+        static let tickOuterRadius: CGFloat = 137.5
+        static let majorTickInnerRadius: CGFloat = 114   // every 5 minutes
+        static let minorTickInnerRadius: CGFloat = 124
+        static let majorTickWidth: CGFloat = 3.4
+        static let minorTickWidth: CGFloat = 1.9
+        static let numberRadius: CGFloat = 96      // number centers, rotated to face outward
+
+        static let degreesPerMinute: Double = 12   // the face turns this far per minute
+        static let maxMinutes = 29                 // 0 is the first tick, so a full turn can't be set
+
+        static let gripSize = CGSize(width: 168, height: 46)
+        static let gripRadius: CGFloat = 23
+        static let gripDepth: CGFloat = 7
+
+        static let pointerWidth: CGFloat = 24
+        static let pointerTop: CGFloat = 11        // from the top of the frame
+        static let pointerTip: CGFloat = 46
+        static let rivetRadius: CGFloat = 3.8
+        static let rivetCenterY: CGFloat = 20
     }
 }
 
 // MARK: - Effects
 
 enum Effects {
-    /// Soft glow on accent marks (bands, pointer, LED dots).
-    static let accentGlowRadius: CGFloat = 6
-    /// Drop shadow under the knob.
-    static let knobShadow = (color: Color.black.opacity(0.7), radius: CGFloat(22), y: CGFloat(20))
+    /// Shadow under the round Settings button.
+    static let roundButtonShadow = (color: Palette.shadow.opacity(0.16), radius: CGFloat(6), y: CGFloat(6))
+    /// Shadow under the red Unlock button.
+    static let redPillShadow = (color: Color(hex: 0x782814).opacity(0.25), radius: CGFloat(7), y: CGFloat(8))
+    /// Shadow under the cream Lock now button.
+    static let creamPillShadow = (color: Palette.shadow.opacity(0.18), radius: CGFloat(7), y: CGFloat(8))
+    /// Glow around the live status dot.
+    static let redDotGlow = (color: Palette.red.opacity(0.7), radius: CGFloat(3))
+    /// Soft shadow the timer casts on the background.
+    static let dialShadow = (color: Palette.shadow.opacity(0.2), radius: CGFloat(20), x: CGFloat(4), y: CGFloat(30))
+    /// The faint grain on the plastic, drawn as a noise overlay.
+    static let grainOpacity: Double = 0.05
 }
