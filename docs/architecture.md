@@ -48,15 +48,19 @@ The Monitor's daily schedule runs at 00:00:
 - The pending limit, if there is one, becomes the limit.
 - Pending app removals, if there are any, take effect.
 - Today's minutes used resets to 0.
+- The state's day is set to today.
 
 Removals and limit changes wait until midnight so they can't be used to get more time today. Adding apps takes effect immediately.
 
-**Failure mode:** if the Monitor doesn't run at midnight, for example because the phone was off, yesterday's minutes and any pending changes carry over until it does. We check on a device whether iOS runs a missed midnight callback when the phone turns back on.
+**Catching up a missed midnight.** If the phone was off at midnight, the Monitor may not run. So whenever the app opens, it compares today's date with the state's day. If they match, nothing happens. If they differ, midnight was missed and the app runs the same step. Because the step sets the day, running it twice does nothing. The check and the write happen inside one coordinated write, so the app and the Monitor can't both run it.
+
+Until the step has run, anything reading the state and finding an older day treats it as already rolled over: 0 minutes used, at the pending limit if there is one.
 
 ## Data
 
 One small JSON file in the App Group. There are no accounts, no history, and nothing is stored on a server. It holds only:
 
+- **The day** the state belongs to, as calendar-day text such as `"2026-09-29"`. The midnight step uses it to know whether it has run.
 - **The limit,** and an optional **pending limit** that the Monitor applies at midnight.
 - **The picked apps** (`FamilyActivitySelection`), and optional **pending removals** that the Monitor applies at midnight.
 - An optional **current unlock:** its start and end times.
