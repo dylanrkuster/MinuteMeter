@@ -192,6 +192,9 @@ extension View {
 
 enum Metrics {
     static let screenPadding: CGFloat = 24
+    /// Content starts at least this far from the top of the screen. Only phones
+    /// with a short status bar (home-button iPhones) need the extra room.
+    static let minimumTopInset: CGFloat = 36
     static let minTapTarget: CGFloat = 44
 
     // Header

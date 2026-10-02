@@ -3,12 +3,18 @@ import SwiftUI
 /// The app's only main screen.
 struct HomeView: View {
     var body: some View {
-        VStack(alignment: .leading, spacing: 0) {
-            header
-            Spacer(minLength: 0)
+        GeometryReader { geo in
+            VStack(alignment: .leading, spacing: 0) {
+                header
+                timeLeft
+                Spacer(minLength: 0)
+            }
+            .padding(.horizontal, Metrics.screenPadding)
+            // Face ID phones' status bar area already exceeds the minimum, so
+            // this only adds room on home-button phones.
+            .padding(.top, max(0, Metrics.minimumTopInset - geo.safeAreaInsets.top))
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
-        .padding(.horizontal, Metrics.screenPadding)
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Background())
     }
 
@@ -32,6 +38,21 @@ struct HomeView: View {
             SettingsButton()
         }
         .frame(height: Metrics.roundButton)
+    }
+
+    private var timeLeft: some View {
+        VStack(alignment: .leading, spacing: 0) {
+            Text("Left today")
+                .textStyle(.label)
+                .foregroundStyle(Palette.secondary)
+                .padding(.top, Metrics.labelTopSpacing)
+            Text("1:12") // Static until time left is tracked.
+                .textStyle(.heroTime)
+                .lineHeight(Metrics.heroLineHeight, fontSize: 112)
+                .foregroundStyle(Palette.ink)
+                .padding(.top, Metrics.heroTopSpacing)
+                .accessibilityLabel("1 hour 12 minutes left today")
+        }
     }
 
     /// "Sat 26 Sep", matching the design's order in every locale.
