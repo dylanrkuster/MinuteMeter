@@ -1,12 +1,12 @@
 # Architecture
 
-Minute Meter keeps the apps you pick locked. You unlock all of them at once for 1 to 29 minutes, up to a daily limit. When the time runs out, they lock again.
+Minute Meter keeps the apps you pick locked. You pick 1 to 29 minutes on a scroll wheel and slide to unlock all of them at once, up to a daily limit. Sliding again locks them early. When the time runs out, they lock again.
 
 ## Pieces
 
 | Piece | Job |
 |---|---|
-| App | All screens. Starts unlocks and handles Lock now. Writes the stored state. |
+| App | All screens. Starts unlocks and handles slide to lock. Writes the stored state. |
 | Shield Configuration | Draws the shield over a locked app, with time left. Shows Unlock only when time left is above 0. If notifications are off, tells the user to open the app instead. |
 | Shield Action | Handles shield taps. Unlock posts a local notification that opens the app. |
 | Monitor | The only code that runs in the background. Relocks when an unlock ends. At midnight, applies next-day changes and resets today's minutes used. |
@@ -25,7 +25,7 @@ All targets share one App Group, where the shared data lives.
 
 The relock is scheduled before the shields come off. In the other order, a failed schedule would leave the apps unlocked with nothing to relock them.
 
-**Lock now** relocks, cancels the schedule, ends the Live Activity, and clears the current unlock. It refunds the unused minutes, rounded down, but only if the unlock started today. An unlock that started before midnight was charged to yesterday, which midnight already reset, so refunding it would create extra time on the new day. Minutes used never goes below 0. The server's push later does nothing, because the activity has already ended.
+**Slide to lock** (ending early) relocks, cancels the schedule, ends the Live Activity, and clears the current unlock. It refunds the unused minutes, rounded down, but only if the unlock started today. An unlock that started before midnight was charged to yesterday, which midnight already reset, so refunding it would create extra time on the new day. Minutes used never goes below 0. The server's push later does nothing, because the activity has already ended.
 
 ## Relock
 
