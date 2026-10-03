@@ -27,7 +27,7 @@ struct HomeView: View {
                 HStack(spacing: Metrics.statusDotGap) {
                     Circle()
                         .fill(Palette.idleDot)
-                        .overlay(Circle().strokeBorder(.black.opacity(0.15), lineWidth: 0.8))
+                        .overlay(Circle().strokeBorder(Palette.idleDotRing, lineWidth: Metrics.idleDotRingWidth))
                         .frame(width: Metrics.statusDotSize, height: Metrics.statusDotSize)
                     Text("6 apps locked") // Static until apps can be picked.
                         .textStyle(.status)

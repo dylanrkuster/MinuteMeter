@@ -33,8 +33,9 @@ enum Palette {
     // Red accent
     static let red           = Color(hex: 0xD2402A) // pointer, live status dot
 
-    // Status dot when locked
+    // Status dot when locked, and the thin ring around it
     static let idleDot       = Color(hex: 0xB3A994)
+    static let idleDotRing   = Color.black.opacity(0.15)
 
     // Warm brown used for every drop shadow
     static let shadow        = Color(hex: 0x3B2F1E)
@@ -211,6 +212,7 @@ enum Metrics {
     static let headerLineGap: CGFloat = 3        // between the date and the status line
     static let statusDotSize: CGFloat = 7
     static let statusDotGap: CGFloat = 6         // between the dot and the status text
+    static let idleDotRingWidth: CGFloat = 0.8
 
     // Vertical spacing down the screen
     static let labelTopSpacing: CGFloat = 24     // header → "LEFT TODAY"
