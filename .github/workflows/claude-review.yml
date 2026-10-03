@@ -2,7 +2,8 @@ name: Claude code review
 
 on:
   pull_request:
-    types: [opened, synchronize, ready_for_review, reopened]
+    # One review when the PR is opened; later pushes don't trigger another.
+    types: [opened]
 
 # A new push cancels the review still running for the same PR.
 concurrency:

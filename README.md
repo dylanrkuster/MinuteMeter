@@ -1,6 +1,6 @@
 # Minute Meter
 
-A minimal iOS screen time app. The apps you pick stay locked. When you need one, turn the dial to unlock them for a few minutes, up to a daily limit.
+A minimal iOS screen time app. The apps you pick stay locked. When you need one, pick a few minutes on the wheel and slide to unlock them, up to a daily limit.
 
 ## Build
 
