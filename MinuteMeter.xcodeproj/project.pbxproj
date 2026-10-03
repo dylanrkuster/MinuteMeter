@@ -29,6 +29,7 @@
 		CAB9856F1BF37DD399F2E652 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246A19A285F493FBEB897DF7 /* HomeView.swift */; };
 		CC2A18E0AE9B7641AE51C125 /* Monitor.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 79833ED726EE2E5AD57467CE /* Monitor.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D4CA502779D730A0EEF23758 /* UnlockActivityAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFFF9E182870F3B24D8AE0A /* UnlockActivityAttributes.swift */; };
+		E13F3C9FA843DADF38AEC5FE /* MinutesWheel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EC395E1A99D6895E73DBA5 /* MinutesWheel.swift */; };
 		F0E19071625D4284EB0DFC62 /* Chivo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 005E07FBCA96E7D00EE8337A /* Chivo.ttf */; };
 		F32D8598129D650B437BDE91 /* DesignTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF109627DAD8B5DF59826C56 /* DesignTokens.swift */; };
 		F7940BBF49BFFF70C5909CF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A50EADC48B22804A4B39C40 /* Assets.xcassets */; };
@@ -120,6 +121,7 @@
 		79833ED726EE2E5AD57467CE /* Monitor.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = Monitor.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A50EADC48B22804A4B39C40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7D38D0FA24D76DC97A711302 /* AppGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppGroup.swift; sourceTree = "<group>"; };
+		82EC395E1A99D6895E73DBA5 /* MinutesWheel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinutesWheel.swift; sourceTree = "<group>"; };
 		8C9D293CE7C70FC4E62319EC /* DeviceActivityMonitorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceActivityMonitorExtension.swift; sourceTree = "<group>"; };
 		8D6BC933A63B231C836E86BA /* Monitor.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Monitor.entitlements; sourceTree = "<group>"; };
 		990F16CC0E15D476C3D0BD32 /* ShieldConfiguration.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = ShieldConfiguration.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -225,6 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				246A19A285F493FBEB897DF7 /* HomeView.swift */,
+				82EC395E1A99D6895E73DBA5 /* MinutesWheel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -483,6 +486,7 @@
 				04E868BCD8CCA315EB9C1E52 /* DesignTokens.swift in Sources */,
 				CAB9856F1BF37DD399F2E652 /* HomeView.swift in Sources */,
 				4BC43E498994B98CA4FCDC10 /* MinuteMeterApp.swift in Sources */,
+				E13F3C9FA843DADF38AEC5FE /* MinutesWheel.swift in Sources */,
 				D4CA502779D730A0EEF23758 /* UnlockActivityAttributes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

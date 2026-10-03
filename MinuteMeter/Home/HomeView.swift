@@ -8,6 +8,9 @@ struct HomeView: View {
                 header
                 timeLeft
                 Spacer(minLength: 0)
+                MinutesWheel(value: 15) // Static until the wheel scrolls.
+                    .frame(maxWidth: .infinity)
+                Spacer(minLength: 0)
             }
             .padding(.horizontal, Metrics.screenPadding)
             // Face ID phones' status bar area already exceeds the minimum, so
