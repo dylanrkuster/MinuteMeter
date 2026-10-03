@@ -1,6 +1,6 @@
 //  DesignTokens.swift
 //  Design tokens for the light design (cream plastic, red accent).
-//  Source of truth: the design's SVG and HTML files. Values are copied from them.
+//  Source of truth: the mockups in docs/design (HTML and PNG). Values are copied from them.
 //
 //  Font: Chivo, a variable font that covers every weight in one file (SIL Open
 //  Font License). Add it to the app target and the Live Activity target and list
@@ -28,7 +28,6 @@ enum Palette {
     static let ink           = Color(hex: 0x1D1A16) // text, icons
     static let secondary     = Color(hex: 0x7A7163) // labels, status line
     static let unlockedText  = Color(hex: 0xB8361F) // "UNLOCKED" status
-    static let onRed         = Color(hex: 0xFFFDF8) // text on the red button
 
     // Red accent
     static let red           = Color(hex: 0xD2402A) // live status dot
@@ -61,18 +60,6 @@ enum Gradients {
     ]
     static let plasticCenter = UnitPoint(x: 0.42, y: 0.30)
 
-    /// Unlock button, top to bottom.
-    static let redButton: [Gradient.Stop] = [
-        .init(color: Color(hex: 0xE4553C), location: 0),
-        .init(color: Color(hex: 0xC9391F), location: 1),
-    ]
-
-    /// Lock now button, top to bottom.
-    static let creamButton: [Gradient.Stop] = [
-        .init(color: Color(hex: 0xFBF8F2), location: 0),
-        .init(color: Color(hex: 0xE9E2D5), location: 1),
-    ]
-
     /// Live status dot: radial, lit from the top left.
     static let redDot: [Gradient.Stop] = [
         .init(color: Color(hex: 0xFF8A6E), location: 0),
@@ -82,8 +69,8 @@ enum Gradients {
 
 // MARK: - Typography
 //
-// Chivo SemiBold for all text. The font file
-// has no separate files per weight, so styles use the family name plus a weight.
+// Chivo SemiBold for all text. The font file has no separate files per weight,
+// so styles use the family name plus a weight.
 // Always use monospaced digits for times.
 
 enum Typeface {
@@ -112,7 +99,6 @@ struct TextStyle {
     static let status     = TextStyle(size: 11, tracking: 1.54, uppercase: true)                             // "6 APPS LOCKED"
     static let label      = TextStyle(size: 12, tracking: 1.68, uppercase: true)                             // "LEFT TODAY"
     static let heroTime   = TextStyle(size: 112, monospacedDigits: true, tracking: -3.36, uppercase: false)  // "1:12"
-    static let button     = TextStyle(size: 17, tracking: 0.34, uppercase: false)                            // "Unlock 15 min"
 }
 
 extension View {
@@ -157,14 +143,6 @@ enum Metrics {
     static let roundButtonIcon: CGFloat = 20
     static let roundButtonIconStroke: CGFloat = 1.5
     static let roundButtonGradientRadius: CGFloat = 0.75 // fraction of the button's width
-
-    // Pill button (Unlock, Lock now)
-    static let pillWidth: CGFloat = 200
-    static let pillHeight: CGFloat = 54
-    static let pillRadius: CGFloat = 27
-    static let pillLip: CGFloat = 3              // solid edge below
-    static let redPillLip = Color(hex: 0x97291A)
-    static let creamPillLip = Color(hex: 0xC9BFAE)
 }
 
 // MARK: - Effects
@@ -172,10 +150,6 @@ enum Metrics {
 enum Effects {
     /// Shadow under the round Settings button.
     static let roundButtonShadow = (color: Palette.shadow.opacity(0.16), radius: CGFloat(6), y: CGFloat(6))
-    /// Shadow under the red Unlock button.
-    static let redPillShadow = (color: Color(hex: 0x782814).opacity(0.25), radius: CGFloat(7), y: CGFloat(8))
-    /// Shadow under the cream Lock now button.
-    static let creamPillShadow = (color: Palette.shadow.opacity(0.18), radius: CGFloat(7), y: CGFloat(8))
     /// Glow around the live status dot.
     static let redDotGlow = (color: Palette.red.opacity(0.7), radius: CGFloat(3))
     /// The faint grain on the plastic, drawn as a noise overlay.
