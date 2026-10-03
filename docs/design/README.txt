@@ -22,6 +22,8 @@ Colour
   Cream         #F2ECE1 to #D9CFBE background, #FFFEFB to #E2D9C9 plastic
 
 Scroll wheel (342 x 300 pt)
+  Values 1 to 30 minutes. When time left is under 30 minutes, the wheel's maximum is
+  clamped to the time left.
   Selected row: 60 pt band, 14 pt radius, #3B2F1E at 7% with a soft inner shadow.
   Rows step about 54 pt from the center and shrink vertically and fade with distance
   (100%, 50%, 37%, 24% opacity); the top and bottom edges fade out.
@@ -31,5 +33,7 @@ Slider (342 x 66 pt, 12 pt above the bottom margin)
   Thumb: 86 x 54 pt, 13 pt radius, 6 pt inset, with a 3 pt lip and a soft shadow.
     Unlock: red #F06A4D to #C9391F, lip #97291A, chevrons on top.
     Lock:   cream #FFFEFA to #E3DACB, lip #BFB39E.
+  Behavior: drag the thumb all the way to the end of the track to trigger. Released
+    anywhere short of the end, it snaps back to the start (standard slider behavior).
   Label: 12 pt caps, 14% tracking, rgba(84,70,50,0.62) with a 1 pt white text shadow.
     "SLIDE TO UNLOCK 15 MIN" (minutes follow the wheel) or "SLIDE TO LOCK".
