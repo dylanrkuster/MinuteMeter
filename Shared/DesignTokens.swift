@@ -170,7 +170,7 @@ enum Effects {
     /// The wheel's selected-row band: a faint fill, a soft inner shadow at the top,
     /// and a white highlight along the bottom edge.
     static let wheelBandFill = Palette.shadow.opacity(0.07)
-    static let wheelBandShadow = (color: Palette.shadow.opacity(0.16), radius: CGFloat(3), y: CGFloat(1))
+    static let wheelBandShadow = (color: Palette.shadow.opacity(0.16), radius: CGFloat(1.5), y: CGFloat(1)) // CSS blur 3 px ≈ radius 1.5
     static let wheelBandHighlight = Color.white.opacity(0.7)
     /// The faint grain on the plastic, drawn as a noise overlay.
     static let grainOpacity: Double = 0.05
