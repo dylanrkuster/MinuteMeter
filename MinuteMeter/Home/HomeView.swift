@@ -48,7 +48,7 @@ struct HomeView: View {
                 .padding(.top, Metrics.labelTopSpacing)
             Text("1:12") // Static until time left is tracked.
                 .textStyle(.heroTime)
-                .lineHeight(Metrics.heroLineHeight, fontSize: 112)
+                .lineHeight(Metrics.heroLineHeight, fontSize: TextStyle.heroTime.size)
                 .foregroundStyle(Palette.ink)
                 .padding(.top, Metrics.heroTopSpacing)
                 .accessibilityLabel("1 hour 12 minutes left today")

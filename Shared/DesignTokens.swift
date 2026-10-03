@@ -162,15 +162,25 @@ enum Typeface {
 /// Named text styles from the design. `tracking` is in points.
 struct TextStyle {
     let font: Font
+    /// The font's point size. Stored because SwiftUI's `Font` doesn't expose it.
+    let size: CGFloat
     let tracking: CGFloat
     let uppercase: Bool
 
-    static let date       = TextStyle(font: Typeface.chivo(13), tracking: 1.82, uppercase: true)                      // "SAT 26 SEP"
-    static let status     = TextStyle(font: Typeface.chivo(11), tracking: 1.54, uppercase: true)                      // "6 APPS LOCKED"
-    static let label      = TextStyle(font: Typeface.chivo(12), tracking: 1.68, uppercase: true)                      // "LEFT TODAY"
-    static let heroTime   = TextStyle(font: Typeface.chivo(112).monospacedDigit(), tracking: -3.36, uppercase: false) // "1:12"
-    static let button     = TextStyle(font: Typeface.chivo(17), tracking: 0.34, uppercase: false)                     // "Unlock 15 min"
-    static let dialNumber = TextStyle(font: Typeface.chivo(27, .medium), tracking: 0, uppercase: false)               // "15"
+    init(size: CGFloat, weight: Font.Weight = .semibold, monospacedDigits: Bool = false, tracking: CGFloat, uppercase: Bool) {
+        let font = Typeface.chivo(size, weight)
+        self.font = monospacedDigits ? font.monospacedDigit() : font
+        self.size = size
+        self.tracking = tracking
+        self.uppercase = uppercase
+    }
+
+    static let date       = TextStyle(size: 13, tracking: 1.82, uppercase: true)                             // "SAT 26 SEP"
+    static let status     = TextStyle(size: 11, tracking: 1.54, uppercase: true)                             // "6 APPS LOCKED"
+    static let label      = TextStyle(size: 12, tracking: 1.68, uppercase: true)                             // "LEFT TODAY"
+    static let heroTime   = TextStyle(size: 112, monospacedDigits: true, tracking: -3.36, uppercase: false)  // "1:12"
+    static let button     = TextStyle(size: 17, tracking: 0.34, uppercase: false)                            // "Unlock 15 min"
+    static let dialNumber = TextStyle(size: 27, weight: .medium, tracking: 0, uppercase: false)              // "15"
 }
 
 extension View {
