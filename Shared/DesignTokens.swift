@@ -33,8 +33,9 @@ enum Palette {
     // Red accent
     static let red           = Color(hex: 0xD2402A) // pointer, live status dot
 
-    // Status dot when locked
+    // Status dot when locked, and the thin ring around it
     static let idleDot       = Color(hex: 0xB3A994)
+    static let idleDotRing   = Color.black.opacity(0.15)
 
     // Warm brown used for every drop shadow
     static let shadow        = Color(hex: 0x3B2F1E)
@@ -162,15 +163,25 @@ enum Typeface {
 /// Named text styles from the design. `tracking` is in points.
 struct TextStyle {
     let font: Font
+    /// The font's point size. Stored because SwiftUI's `Font` doesn't expose it.
+    let size: CGFloat
     let tracking: CGFloat
     let uppercase: Bool
 
-    static let date       = TextStyle(font: Typeface.chivo(13), tracking: 1.82, uppercase: true)                      // "SAT 26 SEP"
-    static let status     = TextStyle(font: Typeface.chivo(11), tracking: 1.54, uppercase: true)                      // "6 APPS LOCKED"
-    static let label      = TextStyle(font: Typeface.chivo(12), tracking: 1.68, uppercase: true)                      // "LEFT TODAY"
-    static let heroTime   = TextStyle(font: Typeface.chivo(112).monospacedDigit(), tracking: -3.36, uppercase: false) // "1:12"
-    static let button     = TextStyle(font: Typeface.chivo(17), tracking: 0.34, uppercase: false)                     // "Unlock 15 min"
-    static let dialNumber = TextStyle(font: Typeface.chivo(27, .medium), tracking: 0, uppercase: false)               // "15"
+    init(size: CGFloat, weight: Font.Weight = .semibold, monospacedDigits: Bool = false, tracking: CGFloat, uppercase: Bool) {
+        let font = Typeface.chivo(size, weight)
+        self.font = monospacedDigits ? font.monospacedDigit() : font
+        self.size = size
+        self.tracking = tracking
+        self.uppercase = uppercase
+    }
+
+    static let date       = TextStyle(size: 13, tracking: 1.82, uppercase: true)                             // "SAT 26 SEP"
+    static let status     = TextStyle(size: 11, tracking: 1.54, uppercase: true)                             // "6 APPS LOCKED"
+    static let label      = TextStyle(size: 12, tracking: 1.68, uppercase: true)                             // "LEFT TODAY"
+    static let heroTime   = TextStyle(size: 112, monospacedDigits: true, tracking: -3.36, uppercase: false)  // "1:12"
+    static let button     = TextStyle(size: 17, tracking: 0.34, uppercase: false)                            // "Unlock 15 min"
+    static let dialNumber = TextStyle(size: 27, weight: .medium, tracking: 0, uppercase: false)              // "15"
 }
 
 extension View {
@@ -192,12 +203,16 @@ extension View {
 
 enum Metrics {
     static let screenPadding: CGFloat = 24
+    /// Content starts at least this far from the top of the screen. Only phones
+    /// with a short status bar (home-button iPhones) need the extra room.
+    static let minimumTopInset: CGFloat = 36
     static let minTapTarget: CGFloat = 44
 
     // Header
     static let headerLineGap: CGFloat = 3        // between the date and the status line
     static let statusDotSize: CGFloat = 7
     static let statusDotGap: CGFloat = 6         // between the dot and the status text
+    static let idleDotRingWidth: CGFloat = 0.8
 
     // Vertical spacing down the screen
     static let labelTopSpacing: CGFloat = 24     // header → "LEFT TODAY"
@@ -209,6 +224,9 @@ enum Metrics {
     static let roundButton: CGFloat = 44
     static let roundButtonLip: CGFloat = 2       // solid edge below, in `roundButtonLipColor`
     static let roundButtonLipColor = Color(hex: 0xCDC3B1)
+    static let roundButtonIcon: CGFloat = 20
+    static let roundButtonIconStroke: CGFloat = 1.5
+    static let roundButtonGradientRadius: CGFloat = 0.75 // fraction of the button's width
 
     // Pill button (Unlock, Lock now)
     static let pillWidth: CGFloat = 200
