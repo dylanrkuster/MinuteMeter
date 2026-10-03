@@ -1,6 +1,6 @@
 # Architecture
 
-Minute Meter keeps the apps you pick locked. You pick 1 to 29 minutes on a scroll wheel and slide to unlock all of them at once, up to a daily limit. Sliding again locks them early. When the time runs out, they lock again.
+Minute Meter keeps the apps you pick locked. You pick 1 to 30 minutes on a scroll wheel and slide to unlock all of them at once, up to a daily limit. Sliding again locks them early. When the time runs out, they lock again.
 
 ## Pieces
 
