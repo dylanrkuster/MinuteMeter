@@ -224,6 +224,9 @@ enum Metrics {
     static let roundButton: CGFloat = 44
     static let roundButtonLip: CGFloat = 2       // solid edge below, in `roundButtonLipColor`
     static let roundButtonLipColor = Color(hex: 0xCDC3B1)
+    static let roundButtonIcon: CGFloat = 20
+    static let roundButtonIconStroke: CGFloat = 1.5
+    static let roundButtonGradientRadius: CGFloat = 0.75 // fraction of the button's width
 
     // Pill button (Unlock, Lock now)
     static let pillWidth: CGFloat = 200

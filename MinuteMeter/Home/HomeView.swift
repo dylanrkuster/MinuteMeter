@@ -70,15 +70,15 @@ private struct SettingsButton: View {
             // Opens Settings in a later issue.
         } label: {
             SlidersIcon()
-                .stroke(Palette.ink, style: StrokeStyle(lineWidth: 1.5, lineCap: .round, lineJoin: .round))
-                .frame(width: 20, height: 20)
+                .stroke(Palette.ink, style: StrokeStyle(lineWidth: Metrics.roundButtonIconStroke, lineCap: .round, lineJoin: .round))
+                .frame(width: Metrics.roundButtonIcon, height: Metrics.roundButtonIcon)
                 .frame(width: Metrics.roundButton, height: Metrics.roundButton)
                 .background {
                     Circle().fill(RadialGradient(
                         stops: Gradients.plastic,
                         center: Gradients.plasticCenter,
                         startRadius: 0,
-                        endRadius: Metrics.roundButton * 0.75
+                        endRadius: Metrics.roundButton * Metrics.roundButtonGradientRadius
                     ))
                 }
                 // Solid lip below, then a soft shadow.
