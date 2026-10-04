@@ -20,7 +20,12 @@ struct MinutesWheel: View {
                 .allowsHitTesting(false)
         }
         .frame(width: Wheel.size.width, height: Wheel.size.height)
+        .coordinateSpace(name: Self.space)
     }
+
+    /// The wheel's own coordinate space, so each row can measure its distance
+    /// from the wheel's center.
+    nonisolated private static let space = "MinutesWheel"
 
     /// A snapping scroll view of 1 to 30. The vertical content margins let the
     /// first and last rows reach the center, and view-aligned snapping means
@@ -34,13 +39,40 @@ struct MinutesWheel: View {
                         .foregroundStyle(Palette.ink)
                         .frame(maxWidth: .infinity)
                         .frame(height: Wheel.rowHeight)
+                        .visualEffect { content, proxy in
+                            // Signed distance from the wheel's center, in rows.
+                            let rows = (proxy.frame(in: .named(Self.space)).midY - Wheel.size.height / 2) / Wheel.rowHeight
+                            let distance = abs(rows)
+                            return content
+                                .scaleEffect(x: 1, y: Self.interpolate(Wheel.rowScales, at: distance))
+                                .opacity(Self.interpolate(Wheel.rowOpacities.map { CGFloat($0) }, at: distance))
+                                .offset(y: rows > 0 ? -Self.interpolate(Wheel.rowPulls, at: distance)
+                                                    : Self.interpolate(Wheel.rowPulls, at: distance))
+                        }
                 }
             }
             .scrollTargetLayout()
         }
+        .mask(
+            LinearGradient(stops: [
+                .init(color: .clear, location: 0),
+                .init(color: .black, location: Wheel.edgeFade),
+                .init(color: .black, location: 1 - Wheel.edgeFade),
+                .init(color: .clear, location: 1),
+            ], startPoint: .top, endPoint: .bottom)
+        )
         .contentMargins(.vertical, (Wheel.size.height - Wheel.rowHeight) / 2, for: .scrollContent)
         .scrollTargetBehavior(.viewAligned)
         .scrollPosition(id: selection)
+    }
+
+    /// Reads `values` at a fractional index, blending linearly between neighbors.
+    /// Past the last entry it holds the last value.
+    nonisolated private static func interpolate(_ values: [CGFloat], at index: CGFloat) -> CGFloat {
+        let lower = min(Int(index), values.count - 1)
+        let upper = min(lower + 1, values.count - 1)
+        let t = index - CGFloat(lower)
+        return values[lower] + (values[upper] - values[lower]) * min(t, 1)
     }
 
     /// Bridges the non-optional `value` to the optional ID `scrollPosition` uses.

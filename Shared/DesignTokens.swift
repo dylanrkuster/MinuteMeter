@@ -156,6 +156,9 @@ enum Metrics {
         /// index 0 is the selected row, then 1, 2, and 3 rows away.
         static let rowScales: [CGFloat] = [1, 0.94, 0.766, 0.5]
         static let rowOpacities: [Double] = [1, 0.5, 0.37, 0.24]
+        /// How far each row is pulled toward the center, so shrunken rows bunch
+        /// together like the face of a drum.
+        static let rowPulls: [CGFloat] = [0, 0, 6.5, 25.3]
         static let edgeFade: CGFloat = 0.26          // top and bottom fraction that fades out
     }
 }
