@@ -28,8 +28,8 @@ struct MinutesWheel: View {
     nonisolated private static let space = "MinutesWheel"
 
     /// A snapping scroll view of 1 to 30. The vertical content margins let the
-    /// first and last rows reach the center, and view-aligned snapping means
-    /// it always settles with one row centered in the band.
+    /// first and last rows reach the center, and `RowSnapping` means it always
+    /// settles with one row centered in the band.
     private var numbers: some View {
         ScrollView(.vertical, showsIndicators: false) {
             LazyVStack(spacing: 0) {
@@ -62,7 +62,7 @@ struct MinutesWheel: View {
             ], startPoint: .top, endPoint: .bottom)
         )
         .contentMargins(.vertical, (Wheel.size.height - Wheel.rowHeight) / 2, for: .scrollContent)
-        .scrollTargetBehavior(.viewAligned)
+        .scrollTargetBehavior(RowSnapping(rowHeight: Wheel.rowHeight))
         .scrollPosition(id: selection)
     }
 
@@ -106,5 +106,17 @@ struct MinutesWheel: View {
                 .clipShape(shape)
             }
             .frame(height: Wheel.bandHeight)
+    }
+}
+
+/// Lands every scroll on a whole row. When a drag or flick ends, SwiftUI
+/// proposes where the scroll will come to rest; this rounds that to the nearest
+/// multiple of the row height. Pure arithmetic, so unlike `.viewAligned` it
+/// doesn't depend on the target row having been laid out yet.
+private struct RowSnapping: ScrollTargetBehavior {
+    let rowHeight: CGFloat
+
+    func updateTarget(_ target: inout ScrollTarget, context: TargetContext) {
+        target.rect.origin.y = (target.rect.minY / rowHeight).rounded() * rowHeight
     }
 }
