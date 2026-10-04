@@ -2,13 +2,16 @@ import SwiftUI
 
 /// The app's only main screen.
 struct HomeView: View {
+    /// The unlock length picked on the wheel.
+    @State private var minutes = 15
+
     var body: some View {
         GeometryReader { geo in
             VStack(alignment: .leading, spacing: 0) {
                 header
                 timeLeft
                 Spacer(minLength: 0)
-                MinutesWheel(value: 15) // Static until the wheel scrolls.
+                MinutesWheel(value: $minutes)
                     .frame(maxWidth: .infinity)
                 Spacer(minLength: 0)
             }

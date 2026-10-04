@@ -1,28 +1,51 @@
 import SwiftUI
 
-/// Picks an unlock length in minutes. Static for now: shows the selected value
-/// in its band with the "MIN" label.
+/// Picks an unlock length in minutes by scrolling a column of numbers.
 struct MinutesWheel: View {
-    let value: Int
+    @Binding var value: Int
+
+    static let range = 1...30
 
     private typealias Wheel = Metrics.Wheel
 
     var body: some View {
         ZStack {
             band
-            Text("\(value)")
-                .textStyle(.wheelNumber)
-                .foregroundStyle(Palette.ink)
-                .frame(height: Wheel.rowHeight)
+            numbers
             Text("Min")
                 .textStyle(.label)
                 .foregroundStyle(Palette.secondary)
-                .fixedSize()
-                .frame(width: Wheel.size.width, alignment: .leading)
-                .padding(.leading, Wheel.size.width + 2 * Wheel.unitOffsetX)
-                .frame(width: Wheel.size.width)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.leading, Wheel.size.width / 2 + Wheel.unitOffsetX)
+                .allowsHitTesting(false)
         }
         .frame(width: Wheel.size.width, height: Wheel.size.height)
+    }
+
+    /// A snapping scroll view of 1 to 30. The vertical content margins let the
+    /// first and last rows reach the center, and view-aligned snapping means
+    /// it always settles with one row centered in the band.
+    private var numbers: some View {
+        ScrollView(.vertical, showsIndicators: false) {
+            LazyVStack(spacing: 0) {
+                ForEach(Self.range, id: \.self) { minutes in
+                    Text("\(minutes)")
+                        .textStyle(.wheelNumber)
+                        .foregroundStyle(Palette.ink)
+                        .frame(maxWidth: .infinity)
+                        .frame(height: Wheel.rowHeight)
+                }
+            }
+            .scrollTargetLayout()
+        }
+        .contentMargins(.vertical, (Wheel.size.height - Wheel.rowHeight) / 2, for: .scrollContent)
+        .scrollTargetBehavior(.viewAligned)
+        .scrollPosition(id: selection)
+    }
+
+    /// Bridges the non-optional `value` to the optional ID `scrollPosition` uses.
+    private var selection: Binding<Int?> {
+        Binding(get: { value }, set: { if let new = $0 { value = new } })
     }
 
     /// The recessed band behind the selected row, drawn as layers: a faint fill,
