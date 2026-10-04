@@ -21,6 +21,20 @@ struct MinutesWheel: View {
         }
         .frame(width: Wheel.size.width, height: Wheel.size.height)
         .coordinateSpace(name: Self.space)
+        // The same tick as the system picker wheel, once per value change.
+        .sensoryFeedback(.selection, trigger: value)
+        // VoiceOver reads the wheel as one adjustable control: swipe up or
+        // down to change the value by one.
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel("Unlock length")
+        .accessibilityValue("\(value) minutes")
+        .accessibilityAdjustableAction { direction in
+            switch direction {
+            case .increment: value = min(value + 1, Self.range.upperBound)
+            case .decrement: value = max(value - 1, Self.range.lowerBound)
+            @unknown default: break
+            }
+        }
     }
 
     /// The wheel's own coordinate space, so each row can measure its distance
