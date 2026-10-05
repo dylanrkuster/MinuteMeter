@@ -23,6 +23,18 @@ final class MinutesWheelUITests: XCTestCase {
         XCTAssertLessThan(settledMinutes(), afterUp)
     }
 
+    func testStopsAt1And30() {
+        // Several hard flings, more than enough to reach each end, so the
+        // last ones push against the end and must not go past it.
+        for _ in 1...3 { wheel.swipeDown(velocity: .fast) }
+        XCTAssertEqual(settledMinutes(), 1)
+        XCTAssertEqual(wheel.value as? String, "1 minute")
+
+        for _ in 1...3 { wheel.swipeUp(velocity: .fast) }
+        XCTAssertEqual(settledMinutes(), 30)
+        XCTAssertEqual(wheel.value as? String, "30 minutes")
+    }
+
     // MARK: - Helpers
 
     /// The wheel's value once it stops changing, read from its VoiceOver
