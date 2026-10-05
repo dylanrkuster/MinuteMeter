@@ -9,7 +9,7 @@ final class MinutesWheelUITests: XCTestCase {
         let app = XCUIApplication()
         app.launch()
         wheel = app.descendants(matching: .any)["minutesWheel"]
-        XCTAssertTrue(wheel.waitForExistence(timeout: 5))
+        XCTAssertTrue(wheel.waitForExistence(timeout: 15))
     }
 
     func testOpensOn15AndScrollsBothWays() {

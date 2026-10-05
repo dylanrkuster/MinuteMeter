@@ -8,7 +8,7 @@ A minimal iOS screen time app. This is a personal project: quality over speed, a
 2. Branch off `main` as `<issue number>-<short-slug>`, for example `12-slide-to-unlock`.
 3. Commit in small, working steps as the work progresses.
 4. Push the branch and open a PR whose description starts with `Closes #<issue>`.
-5. A Claude code review runs on the PR and checks it against the issue. Unit and UI tests will run on PRs too.
+5. A Claude code review runs on the PR and checks it against the issue. The unit and UI tests run in CI on every push (triggered by `push`, not `pull_request`), and their result shows as a check on the PR.
 6. The owner merges. Never push to `main` directly.
 
 ## Keep the owner in the loop

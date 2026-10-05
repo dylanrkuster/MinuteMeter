@@ -1,0 +1,44 @@
+name: Tests
+
+# Every push to any branch. PR branches show the result as a check on the PR,
+# and main is covered after each merge.
+on:
+  push:
+
+# A new push to the same branch cancels the run still going for it.
+concurrency:
+  group: tests-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    runs-on: macos-26
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v6
+
+      # Pin Xcode so the image's default changing doesn't break the build. The
+      # image's default (26.6) shipped without usable iPhone simulators.
+      - name: Select Xcode
+        run: sudo xcode-select -s /Applications/Xcode_26.5.app
+
+      - name: Show Xcode version
+        run: xcodebuild -version
+
+      # Runs both test targets in the MinuteMeter scheme: MinuteMeterTests
+      # (unit) and MinuteMeterUITests (UI).
+      - name: Run unit and UI tests
+        run: >-
+          xcodebuild test
+          -project MinuteMeter.xcodeproj
+          -scheme MinuteMeter
+          -destination 'platform=iOS Simulator,name=iPhone 17,OS=26.5'
+          -resultBundlePath TestResults.xcresult
+
+      # The result bundle has logs and, for UI tests, screenshots of each step.
+      - name: Upload test results
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: TestResults
+          path: TestResults.xcresult
