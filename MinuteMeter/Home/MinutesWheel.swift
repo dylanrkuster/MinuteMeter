@@ -27,6 +27,7 @@ struct MinutesWheel: View {
         // down to change the value by one.
         .accessibilityElement(children: .ignore)
         .accessibilityLabel("Unlock length")
+        .accessibilityIdentifier("minutesWheel")
         .accessibilityValue(value == 1 ? "1 minute" : "\(value) minutes")
         .accessibilityAdjustableAction { direction in
             switch direction {
@@ -127,10 +128,16 @@ struct MinutesWheel: View {
 /// proposes where the scroll will come to rest; this rounds that to the nearest
 /// multiple of the row height. Pure arithmetic, so unlike `.viewAligned` it
 /// doesn't depend on the target row having been laid out yet.
-private struct RowSnapping: ScrollTargetBehavior {
+struct RowSnapping: ScrollTargetBehavior {
     let rowHeight: CGFloat
 
     func updateTarget(_ target: inout ScrollTarget, context: TargetContext) {
-        target.rect.origin.y = (target.rect.minY / rowHeight).rounded() * rowHeight
+        target.rect.origin.y = Self.snappedOffset(target.rect.minY, rowHeight: rowHeight)
+    }
+
+    /// The whole-row offset nearest to `offset`. Separate from `updateTarget`
+    /// so it can be unit tested without a scroll view.
+    static func snappedOffset(_ offset: CGFloat, rowHeight: CGFloat) -> CGFloat {
+        (offset / rowHeight).rounded() * rowHeight
     }
 }
