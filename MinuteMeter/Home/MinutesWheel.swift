@@ -25,6 +25,9 @@ struct MinutesWheel: View {
         .sensoryFeedback(.selection, trigger: value)
         // VoiceOver reads the wheel as one adjustable control: swipe up or
         // down to change the value by one.
+        // Without this, the accessibility frame grows to include rows scrolled
+        // out of view, so VoiceOver's outline and test gestures land below the wheel.
+        .contentShape(.accessibility, Rectangle())
         .accessibilityElement(children: .ignore)
         .accessibilityLabel("Unlock length")
         .accessibilityIdentifier("minutesWheel")
