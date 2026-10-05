@@ -17,8 +17,15 @@ jobs:
     steps:
       - uses: actions/checkout@v6
 
-      - name: Show Xcode version
-        run: xcodebuild -version
+      # Pin Xcode so the image's default changing doesn't break the build. The
+      # image's default (26.6) shipped without usable iPhone simulators.
+      - name: Select Xcode
+        run: sudo xcode-select -s /Applications/Xcode_26.5.app
+
+      - name: Show Xcode and simulators
+        run: |
+          xcodebuild -version
+          xcrun simctl list devices available
 
       # Runs both test targets in the MinuteMeter scheme: MinuteMeterTests
       # (unit) and MinuteMeterUITests (UI).
@@ -27,7 +34,7 @@ jobs:
           xcodebuild test
           -project MinuteMeter.xcodeproj
           -scheme MinuteMeter
-          -destination 'platform=iOS Simulator,name=iPhone 17,OS=latest'
+          -destination 'platform=iOS Simulator,name=iPhone 17,OS=26.5'
           -resultBundlePath TestResults.xcresult
 
       # The result bundle has logs and, for UI tests, screenshots of each step.
