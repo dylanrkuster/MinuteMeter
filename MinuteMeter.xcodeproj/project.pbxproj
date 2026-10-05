@@ -18,6 +18,7 @@
 		5B8D61F19DD3C97712B92E0C /* ShieldAction.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 4C94881B9E8A1A7502325A43 /* ShieldAction.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		65D9B047AD1EA5E712E6D14A /* UnlockLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE3C50C79757818234B90EF /* UnlockLiveActivity.swift */; };
 		672E9F36EA1CE6549C708C19 /* DeviceActivityMonitorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9D293CE7C70FC4E62319EC /* DeviceActivityMonitorExtension.swift */; };
+		6ED561D19014DCF8B5C5F400 /* RowSnappingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25096602A3722372A3BBF9E0 /* RowSnappingTests.swift */; };
 		70E5F19E11DB7011F525EA4B /* UnlockActivityAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFFF9E182870F3B24D8AE0A /* UnlockActivityAttributes.swift */; };
 		9966A6F281D7A83A83022C14 /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D38D0FA24D76DC97A711302 /* AppGroup.swift */; };
 		99AE4BAF3890F5EB677811AC /* Chivo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 005E07FBCA96E7D00EE8337A /* Chivo.ttf */; };
@@ -25,10 +26,12 @@
 		9FD05856C444EB987904636D /* ShieldActionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7082899C25FE130749A7A0E3 /* ShieldActionExtension.swift */; };
 		A9B1F8606C9E5E0E49C1B62F /* DesignTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF109627DAD8B5DF59826C56 /* DesignTokens.swift */; };
 		AC59ADB7FFB3E8D604185800 /* ShieldConfiguration.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 990F16CC0E15D476C3D0BD32 /* ShieldConfiguration.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B7E71623FD4750F21671E35F /* MinutesWheelUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCA23B94FEBC7775EB94DC0 /* MinutesWheelUITests.swift */; };
 		C725773A2B004C1C68999FF6 /* ShieldConfigurationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6236C0C5117737FC3ABF3053 /* ShieldConfigurationExtension.swift */; };
 		CAB9856F1BF37DD399F2E652 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246A19A285F493FBEB897DF7 /* HomeView.swift */; };
 		CC2A18E0AE9B7641AE51C125 /* Monitor.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 79833ED726EE2E5AD57467CE /* Monitor.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D4CA502779D730A0EEF23758 /* UnlockActivityAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFFF9E182870F3B24D8AE0A /* UnlockActivityAttributes.swift */; };
+		E13F3C9FA843DADF38AEC5FE /* MinutesWheel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EC395E1A99D6895E73DBA5 /* MinutesWheel.swift */; };
 		F0E19071625D4284EB0DFC62 /* Chivo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 005E07FBCA96E7D00EE8337A /* Chivo.ttf */; };
 		F32D8598129D650B437BDE91 /* DesignTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF109627DAD8B5DF59826C56 /* DesignTokens.swift */; };
 		F7940BBF49BFFF70C5909CF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A50EADC48B22804A4B39C40 /* Assets.xcassets */; };
@@ -105,6 +108,7 @@
 		0C68322C0BE0DC1621A9F258 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		1C70E124930E3835B9E85DC8 /* MinuteMeterUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = MinuteMeterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		246A19A285F493FBEB897DF7 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		25096602A3722372A3BBF9E0 /* RowSnappingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowSnappingTests.swift; sourceTree = "<group>"; };
 		262903BB42DBB2D6F964B177 /* MinuteMeterTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = MinuteMeterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		31FAB9782D05F83BE75AB4A4 /* .gitkeep */ = {isa = PBXFileReference; path = .gitkeep; sourceTree = "<group>"; };
 		341F7DF6B8BEBC0FB50DF5BC /* MinuteMeter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MinuteMeter.entitlements; sourceTree = "<group>"; };
@@ -120,11 +124,13 @@
 		79833ED726EE2E5AD57467CE /* Monitor.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = Monitor.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A50EADC48B22804A4B39C40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7D38D0FA24D76DC97A711302 /* AppGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppGroup.swift; sourceTree = "<group>"; };
+		82EC395E1A99D6895E73DBA5 /* MinutesWheel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinutesWheel.swift; sourceTree = "<group>"; };
 		8C9D293CE7C70FC4E62319EC /* DeviceActivityMonitorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceActivityMonitorExtension.swift; sourceTree = "<group>"; };
 		8D6BC933A63B231C836E86BA /* Monitor.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Monitor.entitlements; sourceTree = "<group>"; };
 		990F16CC0E15D476C3D0BD32 /* ShieldConfiguration.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = ShieldConfiguration.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		A95C9E3D4F41BDF36F708DD3 /* LiveActivity.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = LiveActivity.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7BC9A7D234DCD1CF103B6DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		CDCA23B94FEBC7775EB94DC0 /* MinutesWheelUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinutesWheelUITests.swift; sourceTree = "<group>"; };
 		D5D9A9A6556994D8F798DDF8 /* MinuteMeterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinuteMeterApp.swift; sourceTree = "<group>"; };
 		E7BD0E955CD6ECC53769F220 /* MinuteMeter.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = MinuteMeter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF109627DAD8B5DF59826C56 /* DesignTokens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignTokens.swift; sourceTree = "<group>"; };
@@ -217,6 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				49E003B8648BAAB4F3EDD0C8 /* .gitkeep */,
+				CDCA23B94FEBC7775EB94DC0 /* MinutesWheelUITests.swift */,
 			);
 			path = MinuteMeterUITests;
 			sourceTree = "<group>";
@@ -225,6 +232,7 @@
 			isa = PBXGroup;
 			children = (
 				246A19A285F493FBEB897DF7 /* HomeView.swift */,
+				82EC395E1A99D6895E73DBA5 /* MinutesWheel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -243,6 +251,7 @@
 			isa = PBXGroup;
 			children = (
 				31FAB9782D05F83BE75AB4A4 /* .gitkeep */,
+				25096602A3722372A3BBF9E0 /* RowSnappingTests.swift */,
 			);
 			path = MinuteMeterTests;
 			sourceTree = "<group>";
@@ -483,6 +492,7 @@
 				04E868BCD8CCA315EB9C1E52 /* DesignTokens.swift in Sources */,
 				CAB9856F1BF37DD399F2E652 /* HomeView.swift in Sources */,
 				4BC43E498994B98CA4FCDC10 /* MinuteMeterApp.swift in Sources */,
+				E13F3C9FA843DADF38AEC5FE /* MinutesWheel.swift in Sources */,
 				D4CA502779D730A0EEF23758 /* UnlockActivityAttributes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -491,6 +501,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6ED561D19014DCF8B5C5F400 /* RowSnappingTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -521,6 +532,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7E71623FD4750F21671E35F /* MinutesWheelUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

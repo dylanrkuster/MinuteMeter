@@ -99,6 +99,7 @@ struct TextStyle {
     static let status     = TextStyle(size: 11, tracking: 1.54, uppercase: true)                             // "6 APPS LOCKED"
     static let label      = TextStyle(size: 12, tracking: 1.68, uppercase: true)                             // "LEFT TODAY"
     static let heroTime   = TextStyle(size: 112, monospacedDigits: true, tracking: -3.36, uppercase: false)  // "1:12"
+    static let wheelNumber = TextStyle(size: 50, monospacedDigits: true, tracking: -1.5, uppercase: false)   // "15"
 }
 
 extension View {
@@ -143,6 +144,23 @@ enum Metrics {
     static let roundButtonIcon: CGFloat = 20
     static let roundButtonIconStroke: CGFloat = 1.5
     static let roundButtonGradientRadius: CGFloat = 0.75 // fraction of the button's width
+
+    /// The minutes wheel.
+    enum Wheel {
+        static let size = CGSize(width: 342, height: 300)
+        static let rowHeight: CGFloat = 54
+        static let bandHeight: CGFloat = 60          // the selected-row band
+        static let bandRadius: CGFloat = 14
+        static let unitOffsetX: CGFloat = 40         // "MIN" label's left edge, from the wheel's center
+        /// Rows shrink vertically and fade with distance from the selected row:
+        /// index 0 is the selected row, then 1, 2, and 3 rows away.
+        static let rowScales: [CGFloat] = [1, 0.94, 0.766, 0.5]
+        static let rowOpacities: [Double] = [1, 0.5, 0.37, 0.24]
+        /// How far each row is pulled toward the center, so shrunken rows bunch
+        /// together like the face of a drum.
+        static let rowPulls: [CGFloat] = [0, 0, 6.5, 25.3]
+        static let edgeFade: CGFloat = 0.26          // top and bottom fraction that fades out
+    }
 }
 
 // MARK: - Effects
@@ -152,6 +170,11 @@ enum Effects {
     static let roundButtonShadow = (color: Palette.shadow.opacity(0.16), radius: CGFloat(6), y: CGFloat(6))
     /// Glow around the live status dot.
     static let redDotGlow = (color: Palette.red.opacity(0.7), radius: CGFloat(3))
+    /// The wheel's selected-row band: a faint fill, a soft inner shadow at the top,
+    /// and a white highlight along the bottom edge.
+    static let wheelBandFill = Palette.shadow.opacity(0.07)
+    static let wheelBandShadow = (color: Palette.shadow.opacity(0.16), radius: CGFloat(1.5), y: CGFloat(1)) // CSS blur 3 px ≈ radius 1.5
+    static let wheelBandHighlight = Color.white.opacity(0.7)
     /// The faint grain on the plastic, drawn as a noise overlay.
     static let grainOpacity: Double = 0.05
 }
