@@ -27,7 +27,7 @@ struct MinutesWheel: View {
         // down to change the value by one.
         .accessibilityElement(children: .ignore)
         .accessibilityLabel("Unlock length")
-        .accessibilityValue("\(value) minutes")
+        .accessibilityValue(value == 1 ? "1 minute" : "\(value) minutes")
         .accessibilityAdjustableAction { direction in
             switch direction {
             case .increment: value = min(value + 1, Self.range.upperBound)
