@@ -18,6 +18,7 @@
 		5B8D61F19DD3C97712B92E0C /* ShieldAction.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 4C94881B9E8A1A7502325A43 /* ShieldAction.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		65D9B047AD1EA5E712E6D14A /* UnlockLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE3C50C79757818234B90EF /* UnlockLiveActivity.swift */; };
 		672E9F36EA1CE6549C708C19 /* DeviceActivityMonitorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9D293CE7C70FC4E62319EC /* DeviceActivityMonitorExtension.swift */; };
+		6ED561D19014DCF8B5C5F400 /* RowSnappingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25096602A3722372A3BBF9E0 /* RowSnappingTests.swift */; };
 		70E5F19E11DB7011F525EA4B /* UnlockActivityAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFFF9E182870F3B24D8AE0A /* UnlockActivityAttributes.swift */; };
 		9966A6F281D7A83A83022C14 /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D38D0FA24D76DC97A711302 /* AppGroup.swift */; };
 		99AE4BAF3890F5EB677811AC /* Chivo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 005E07FBCA96E7D00EE8337A /* Chivo.ttf */; };
@@ -106,6 +107,7 @@
 		0C68322C0BE0DC1621A9F258 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		1C70E124930E3835B9E85DC8 /* MinuteMeterUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = MinuteMeterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		246A19A285F493FBEB897DF7 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		25096602A3722372A3BBF9E0 /* RowSnappingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowSnappingTests.swift; sourceTree = "<group>"; };
 		262903BB42DBB2D6F964B177 /* MinuteMeterTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = MinuteMeterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		31FAB9782D05F83BE75AB4A4 /* .gitkeep */ = {isa = PBXFileReference; path = .gitkeep; sourceTree = "<group>"; };
 		341F7DF6B8BEBC0FB50DF5BC /* MinuteMeter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MinuteMeter.entitlements; sourceTree = "<group>"; };
@@ -246,6 +248,7 @@
 			isa = PBXGroup;
 			children = (
 				31FAB9782D05F83BE75AB4A4 /* .gitkeep */,
+				25096602A3722372A3BBF9E0 /* RowSnappingTests.swift */,
 			);
 			path = MinuteMeterTests;
 			sourceTree = "<group>";
@@ -495,6 +498,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6ED561D19014DCF8B5C5F400 /* RowSnappingTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
