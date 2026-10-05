@@ -93,4 +93,4 @@ A one-time purchase through StoreKit 2 ($9.99 for now). The free version allows 
 - Unit tests cover the limit math and the data layer.
 - XCUITest covers UI flows in the Simulator. Screen Time will sit behind a small interface that tests replace with a fake (planned).
 - Shields, relocking, and the app picker only work on a device, so they get a manual checklist.
-- CI (`.github/workflows/tests.yml`) runs the unit and UI tests on every push, on an iPhone simulator on a GitHub macOS runner. Xcode is pinned, so a change to the runner's default Xcode can't break the build; bump it by hand.
+- CI (`.github/workflows/tests.yml`) runs the unit and UI tests on every push to any branch (triggered by `push`, not `pull_request`; a PR shows the result for its latest commit), on an iPhone simulator on a GitHub macOS runner. Xcode is pinned, so a change to the runner's default Xcode can't break the build; bump it by hand.
